@@ -1,0 +1,261 @@
+\section{Relation to gyroscopic memory}
+\subsection{Polarization area of a weak TT wave}
+On the same local radiation-zone patch with the adapted screen fixed in the preceding section, write the leading radiative data at a large reference Bondi radius $r$ as a weak TT strain
+\begin{equation}
+h^{TT}(u,r;\eps)=\eps\begin{pmatrix}p(u)&q(u)\\q(u)&-p(u)\end{pmatrix}+O(\eps^2).
+\label{eq:tt}
+\end{equation}
+In the radiation zone, $p,q=O(r^{-1})$. We work at fixed $r$ and suppress the $r$ argument below. Stationarity before and after the burst implies $\dot p(u_\pm)=\dot q(u_\pm)=0$. If
+\[
+X(\eps)=X^{(0)}+\eps X^{(1)}+\eps^2X^{(2)}+O(\eps^3),
+\]
+we denote the coefficient of $\eps^2$ by $X^{(2)}$. Thus $\Delta\Psi_{\rm H}^{(2)}$ is neither the full finite-amplitude memory nor the full order-$\eps^2$ contribution with the explicit factor $\eps^2$ included; it is the quadratic perturbative coefficient.
+
+With metric signature $(-+++)$, the convention $T_{AB}=-R(e_A,k,e_B,k)$ from Eq.~\eqref{eq:tidal}, and our outgoing/retarded-time convention, a radiation-crossing null line normalized by $du/d\lambda=1$ and equipped with a screen adapted to the Bondi/TT polarization dyad has leading type-N radiative curvature
+\[
+R(e_A,k,e_B,k)=-\frac12\ddot h^{TT}_{AB}
++\text{(subleading in $1/r$ and nonlinear amplitude)}.
+\]
+Hence the leading tidal profile is $T=\frac12\ddot h^{TT}$, so the same pair $(p,q)$ can be inserted into both the Jacobi and Bondi/TT descriptions. The required statement is this fixed local identification; we do not assert that arbitrary null directions at finite $r$ give the same $T$. The overall sign of the TT/Bondi relation is convention dependent, but a simultaneous sign flip of $(p,q)$ leaves the quadratic area below unchanged. We fix the sign convention in Eq.~\eqref{eq:shear-strain} and use it consistently.
+
+The quadratic Jacobi coefficient is the signed polarization-plane area obtained by closing the trajectory $(p,q)$ with a straight chord,
+\begin{equation}
+\mathcal A_{\rm pol}[p,q]
+=\frac12\int_{u_-}^{u_+}(p\dot q-q\dot p)\,du
++\frac12[p_fq_i-p_iq_f].
+\label{eq:area}
+\end{equation}
+More precisely,
+\begin{equation}
+\omega_\gamma(\eps)=\eps^2\omega_\gamma^{(2)}+O(\eps^3),
+\qquad
+\omega_\gamma^{(2)}=\mathcal A_{\rm pol}[p,q].
+\label{eq:omega-area}
+\end{equation}
+In the initially shear-free reference frame, $p_i=q_i=0$, so the chord term vanishes, while the final shear may remain nonzero.
+
+\subsection{Factor-of-two relation to the Bondi hard functional}
+On the local screen write
+\[
+C=\begin{pmatrix}X&Y\\Y&-X\end{pmatrix},\qquad
+\widetilde C=\begin{pmatrix}-Y&X\\X&Y\end{pmatrix}.
+\]
+We use $\epsilon_{12}=+1$ and the same index ordering as Seraj--Oblak and Faye--Seraj,
+$\widetilde C_{AB}=\epsilon_{CA}C^C{}_B$. Reversing the index order in the dual convention would flip the overall sign, but that is not the convention used here. Therefore
+\begin{equation}
+N_{AB}\widetilde C^{AB}=2(X\dot Y-Y\dot X).
+\label{eq:stf-algebra}
+\end{equation}
+Following the polarization convention of Faye--Seraj, we take in the radiation zone
+\begin{equation}
+C_{AB}=-r h^{TT}_{AB}+O(r^0).
+\label{eq:shear-strain}
+\end{equation}
+Eqs.~\eqref{eq:hard-memory}, \eqref{eq:tt}, and \eqref{eq:stf-algebra} give
+\begin{equation}
+\Delta\Psi_{\rm H}(\eps)
+=\eps^2\Delta\Psi_{\rm H}^{(2)}+O(\eps^3),
+\qquad
+\Delta\Psi_{\rm H}^{(2)}
+=-\frac14\int(p\dot q-q\dot p)\,du.
+\label{eq:gyro-area}
+\end{equation}
+Under the initially shear-free condition, Eq.~\eqref{eq:omega-area} becomes
+\begin{equation}
+\omega_\gamma^{(2)}=\frac12\int(p\dot q-q\dot p)\,du.
+\label{eq:jacobi-area-eps}
+\end{equation}
+Hence:
+
+\begin{theorem}[Factor relation between the two quadratic functionals of the same radiative data]
+\label{thm:bridge}
+In the standard initially shear-free Bondi frame, at weak amplitude and leading radiation-zone order, and with the oriented-screen conventions above,
+\begin{equation}
+\boxed{\omega_\gamma^{(2)}=-2\Delta\Psi_{\rm H}^{(2)}},\qquad
+\boxed{|\omega_\gamma^{(2)}|=2|\Delta\Psi_{\rm H}^{(2)}|}.
+\label{eq:bridge}
+\end{equation}
+\end{theorem}
+
+The quantity $\omega_\gamma^{(2)}$ is a Jacobi scattering observable on a null geodesic, whereas $\Delta\Psi_{\rm H}^{(2)}$ is an orientation angle measured on a timelike gyroscope worldline; they are not identified as the same observable. The equality states that, under the local radiation-zone patch, radiation-crossing null direction, and adapted-screen identification fixed above, the two known quadratic functionals evaluated on the same local TT/Bondi radiative data $(p,q)$ differ by the factor shown. A different null direction or screen identification defines a new auxiliary-probe problem for which the relation must be rechecked. Reversing screen orientation flips both pseudoscalars simultaneously. We do not claim a theorem that controls finite $r$ and finite amplitude simultaneously; the safe coefficient statement is the iterated limit
+\begin{equation}
+\lim_{r\to\infty}r^2\lim_{\eps\to0}\eps^{-2}
+\left(\omega_\gamma(\eps,r)+2\Delta\Psi_{\rm H}(\eps,r)\right)=0.
+\label{eq:iterated-limit}
+\end{equation}
+
+\section{Stationary physical minimum-action theorem}
+Endpoint stationarity determines the optimal coefficient. On the normalized interval, write the first-order tidal profile as
+\[
+A^{(1)}(t)=\alpha(t)\sigma_3+\beta(t)\sigma_1,\qquad
+\alpha=\frac12p'',\quad \beta=\frac12q''.
+\]
+Then $A(t;\eps)=\eps A^{(1)}(t)+O(\eps^2)$. At fixed $r$, $p,q=O(r^{-1})$, so $\alpha,\beta=O(r^{-1})$ and both $Q_\gamma^{(2)}$ and $\Delta\Psi_{\rm H}^{(2)}$ scale as $O(r^{-2})$. Therefore no additional factor of $r$ remains in the ratio or in the optimal coefficient. The Bel--Robinson curvature action has expansion
+\begin{equation}
+Q_\gamma(\eps)=\eps^2Q_\gamma^{(2)}+O(\eps^3),\qquad
+Q_\gamma^{(2)}=\|\alpha\|_2^2+\|\beta\|_2^2.
+\label{eq:Q-leading}
+\end{equation}
+while $p'(0)=p'(1)=q'(0)=q'(1)=0$ implies
+\begin{equation}
+\int_0^1\alpha(t)\,dt=\int_0^1\beta(t)\,dt=0.
+\label{eq:mean-zero}
+\end{equation}
+Introduce
+\begin{equation}
+\mathcal U_0:=\left\{f\in L^2(0,1):\int_0^1 f(t)\,dt=0\right\},\qquad
+P_0f=f-\int_0^1f(s)\,ds,
+\label{eq:U0}
+\end{equation}
+and define
+\begin{equation}
+K_{\rm stat}:=P_0K_0P_0,
+\qquad
+s_{\rm stat}:=\|K_{\rm stat}\|_{\mathcal U_0\to\mathcal U_0}.
+\label{eq:Kstat}
+\end{equation}
+The operator $K_{\rm stat}$ is compact and skew-adjoint on $\mathcal U_0$.
+
+Define the stationary exact-Jacobi value function by
+\begin{equation}
+\kappa_{\rm stat}(\omega):=
+\inf\{Q_\gamma[A]:\omega_\gamma[A]=\omega,\ \alpha,\beta\in\mathcal U_0\}.
+\label{eq:kappa-stat}
+\end{equation}
+
+\begin{theorem}[Sharp law for the stationary Jacobi channel]
+\label{thm:stationary-sharp}
+\begin{equation}
+\boxed{\kappa_{\rm stat}(\omega)=\frac{|\omega|}{s_{\rm stat}}+O(\omega^2),\qquad \omega\to0.}
+\label{eq:stationary-sharp}
+\end{equation}
+The coefficient $s_{\rm stat}^{-1}$ is sharp for the exact endpoint problem.
+\end{theorem}
+\begin{proof}
+For $\alpha,\beta\in\mathcal U_0$,
+\[
+\langle\alpha,K_0\beta\rangle
+=\langle\alpha,P_0K_0P_0\beta\rangle
+=\langle\alpha,K_{\rm stat}\beta\rangle.
+\]
+Hence
+\[
+2|\langle\alpha,K_0\beta\rangle|
+\le s_{\rm stat}(\|\alpha\|^2+\|\beta\|^2)
+=s_{\rm stat}Q_\gamma.
+\]
+The remainder estimate from the unrestricted theorem is unchanged on the closed subspace, so the lower-bound argument for Theorem~\ref{thm:jacobi-sharp} applies with $s_0$ replaced by $s_{\rm stat}$.
+
+For sharpness, choose a real unit eigenvector $\beta_*$ of the top eigenvalue $s_{\rm stat}^2$ of $-K_{\rm stat}^2$ on the real Hilbert space $\mathcal U_0$, and set
+\[
+\alpha_*:=K_{\rm stat}\beta_*/s_{\rm stat}.
+\]
+Then
+\[
+\|\alpha_*\|=\|\beta_*\|=1,\qquad
+\langle\alpha_*,K_{\rm stat}\beta_*\rangle=s_{\rm stat}.
+\]
+With $A_*=\alpha_*\sigma_3+\beta_*\sigma_1$ and $A_\rho=\rho A_*$, the mean-zero constraints are preserved for every $\rho$, and
+\[
+Q_\gamma[A_\rho]=2\rho^2,\qquad
+\omega_\gamma[A_\rho]=2s_{\rm stat}\rho^2+O(\rho^4).
+\]
+The same one-sided local inversion as in Theorem~\ref{thm:jacobi-sharp}, together with a sign flip of one polarization for negative targets, exactly recovers sufficiently small targets of either sign. The upper and lower asymptotics therefore agree, proving Eq.~\eqref{eq:stationary-sharp}.
+\end{proof}
+
+\begin{lemma}[Realization by stationary TT strain]
+\label{lem:physical-realization}
+For any $\alpha,\beta\in\mathcal U_0$, define
+\begin{equation}
+p(t)=2\int_0^t(t-s)\alpha(s)\,ds,\qquad
+q(t)=2\int_0^t(t-s)\beta(s)\,ds.
+\label{eq:pq-from-control}
+\end{equation}
+Then
+\[
+p(0)=q(0)=p'(0)=q'(0)=p'(1)=q'(1)=0,
+\qquad p''=2\alpha,\ q''=2\beta.
+\]
+Thus the controls lift to first-order TT data that are initially shear free and stationary both before and after the burst.
+\end{lemma}
+\begin{proof}
+The initial conditions follow directly from the definition. Since $p'(t)=2\int_0^t\alpha(s)ds$, one has $p'(1)=2\int_0^1\alpha=0$, and similarly for $q$. The final values $p(1)$ and $q(1)$ are generally nonzero, so a constant final shear is allowed.
+\end{proof}
+
+\begin{lemma}[The same sharp constant for smooth stationary bursts]
+\label{lem:smooth-density}
+Let
+\[
+\mathcal U_{0,c}^\infty:=\left\{f\in C_c^\infty(0,1):\int_0^1f(t)\,dt=0\right\}.
+\]
+Then $\mathcal U_{0,c}^\infty$ is dense in $\mathcal U_0$. Consequently, restricting the admissible class to smooth stationary TT bursts whose curvature vanishes near the endpoints does not change the sharp leading-order coefficient $s_{\rm stat}$.
+\end{lemma}
+\begin{proof}
+For $f\in\mathcal U_0$, choose $g_n\in C_c^\infty(0,1)$ with $g_n\to f$ in $L^2$. Then $\int g_n\to0$. Fix $\chi\in C_c^\infty(0,1)$ with $\int\chi=1$ and define
+\[
+f_n:=g_n-\left(\int_0^1g_n\right)\chi.
+\]
+Then $f_n\in\mathcal U_{0,c}^\infty$ and $f_n\to f$ in $L^2$. Since $K_{\rm stat}$ is bounded, the bilinear form $\langle\alpha,K_{\rm stat}\beta\rangle$ is continuous on $L^2\times L^2$. Hence the top singular pair can be approximated arbitrarily well by smooth mean-zero functions. Each approximating pair vanishes near the endpoints in curvature, so the corresponding $p,q$ from Eq.~\eqref{eq:pq-from-control} extend smoothly as constants outside the active interval. The infimum over the smooth stationary-burst class therefore has the same sharp constant.
+\end{proof}
+
+\section{Main theorem: sharp lower bound on Bel--Robinson curvature action}
+For a leading-order hard-memory target $\psi=\Delta\Psi_{\rm H}^{(2)}$, define the value function of the \emph{leading-order radiative-data problem} by
+\begin{equation}
+\kappa_{\rm H}^{\rm lead}(\psi):=
+\inf\left\{Q_\gamma^{(2)}[A^{(1)}]:
+\Delta\Psi_{\rm H}^{(2)}[A^{(1)}]=\psi,\ \alpha,\beta\in\mathcal U_0\right\}.
+\label{eq:kappa-hard-lead}
+\end{equation}
+The minimization is over the weak-amplitude TT/Bondi tangent-data class above; no value function over the full space of finite-amplitude Einstein solutions is defined.
+
+\begin{theorem}[Sharp minimum curvature action for a fixed radiation-crossing null window]
+\label{thm:main-physical}
+Assume the Bel--Robinson convention of Sec.~II, a fixed radiation-crossing null window $\gamma$ and adapted screen in a local radiation-zone patch with $L/r\to0$, the standard initially shear-free Bondi frame, weak amplitude and leading radiation-zone order, and stationary-in/stationary-out conditions, without imposing zero final shear. Then
+\begin{equation}
+\boxed{\kappa_{\rm H}^{\rm lead}(\psi)=\frac{2}{\|K_{\rm stat}\|}|\psi|.}
+\label{eq:main-physical-value}
+\end{equation}
+This equality is exact for the leading-order perturbative radiative-data problem, and $2/\|K_{\rm stat}\|$ is the optimal coefficient.
+\end{theorem}
+\begin{proof}
+The quadratic leading term in Eq.~\eqref{eq:endpoint-expansion}, combined with Theorem~\ref{thm:bridge}, gives in the initially shear-free stationary class
+\[
+\Delta\Psi_{\rm H}^{(2)}=-\langle\alpha,K_{\rm stat}\beta\rangle.
+\]
+Therefore
+\[
+2|\psi|=2|\langle\alpha,K_{\rm stat}\beta\rangle|
+\le s_{\rm stat}(\|\alpha\|_2^2+\|\beta\|_2^2)
+=s_{\rm stat}Q_\gamma^{(2)},
+\]
+so $Q_\gamma^{(2)}\ge2|\psi|/s_{\rm stat}$.
+
+Conversely, use the real top singular pair $\alpha_*,\beta_*$ constructed in the proof of Theorem~\ref{thm:stationary-sharp}. Choose the sign of $\beta_*$ according to the sign of the target and set
+\[
+\alpha=r\alpha_*,\qquad \beta=\pm r\beta_*,\qquad
+r^2=\frac{|\psi|}{s_{\rm stat}}.
+\]
+Then $\Delta\Psi_{\rm H}^{(2)}=\psi$ and
+\[
+Q_\gamma^{(2)}=2r^2=\frac{2}{s_{\rm stat}}|\psi|
+\]
+exactly. Lemma~\ref{lem:physical-realization} lifts the controls to initially shear-free, stationary-in/stationary-out TT data, and Lemma~\ref{lem:smooth-density} shows that the same infimum is obtained after restricting to smooth bursts whose curvature vanishes near the endpoints.
+\end{proof}
+
+Thus, for the fixed null window and within the stated leading-order class,
+\begin{equation}
+Q_\gamma^{(2)}\ge\frac{2}{\|K_{\rm stat}\|}|\Delta\Psi_{\rm H}^{(2)}|.
+\label{eq:main-bound}
+\end{equation}
+Numerically,
+\begin{equation}
+\|K_{\rm stat}\|=0.0281140680170\ldots,
+\qquad
+\boxed{\frac{2}{\|K_{\rm stat}\|}=71.13876223\ldots.}
+\label{eq:main-bound-num}
+\end{equation}
+These decimal values are validation only and do not define the theorem constant.
+
+\begin{remark}[Relation to the earlier coefficient $21.96874242\ldots$]
+The unrestricted $L^2$ coefficient $2/\|K_0\|=21.96874242\ldots$ remains a valid weaker lower bound on the stationary subclass, but it is not sharp there. Under the mean-zero constraints the optimization must be redone for $K_{\rm stat}=P_0K_0P_0$, yielding the optimal coefficient $2/\|K_{\rm stat}\|$ above.
+\end{remark}

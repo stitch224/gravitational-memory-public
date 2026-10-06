@@ -1,0 +1,145 @@
+\appendix
+\section{Convention ledger}
+\begin{itemize}
+\item Metric signature: $(-+++)$. 
+\item Bondi news: $N_{AB}=\partial_u C_{AB}$. 
+\item Initial frame: $C_{AB}(-\infty)=0$. 
+\item Screen orientation: $\epsilon_{12}=+1$. 
+\item Dual shear: $\widetilde C_{AB}=\epsilon_{CA}C^C{}_B$. 
+\item TT/Bondi relation: $C_{AB}=-rh^{TT}_{AB}+O(r^0)$ with the polarization convention fixed as in the main text.
+\item Optical tidal matrix: $T_{AB}=-R(e_A,k,e_B,k)$. 
+\item Bel--Robinson tensor: Eq.~\eqref{eq:BR-def}, including the explicit factor $1/4$. 
+\item Curvature action: $Q_\gamma=L^3\int B(k^4)d\lambda$; for the representative $du/d\lambda=1$, one has $d\lambda=du$. 
+\item Leading physical cost: $Q_\gamma(\eps)=\eps^2Q_\gamma^{(2)}+O(\eps^3)$. 
+\item Nonlinear Jacobi scalar: $\operatorname{skew}(S_{11}+S_{22})=\omega_\gamma J_2$. 
+\item Stationary control space: $\mathcal U_0=\{f\in L^2(0,1):\int f=0\}$. 
+\end{itemize}
+
+\section{\texorpdfstring{Spectral structure of $K_0$ and the restricted operator}{Spectral structure of K0 and the restricted operator}}
+The operator $K_0$ is compact and skew-adjoint, so $-K_0^2$ is positive, compact, and self-adjoint. Its largest eigenvalue $s^2$ equals $\|K_0\|^2$. Moreover, in the distributional or weak sense,
+\[
+(K_0f)'''=2f,
+\]
+so the eigenvalue problem may be rewritten as an ODE system with boundary conditions. We define the exact constants by operator norms and do not use decimal values in the proof.
+
+For the stationary projection, let $k_0(t,s)=\frac12(t-s)|t-s|$ and
+\[
+m(t)=\int_0^1k_0(t,s)ds=\frac{t^3-(1-t)^3}{6}.
+\]
+Then $P_0K_0P_0$ has kernel
+\begin{equation}
+k_{\rm stat}(t,s)=k_0(t,s)-m(t)+m(s).
+\label{eq:kstat-kernel}
+\end{equation}
+This kernel is antisymmetric and square integrable, so $K_{\rm stat}$ is compact and skew-adjoint on $\mathcal U_0$. Also $(K_{\rm stat}f)'''=2f$, hence $K_{\rm stat}\neq0$. Therefore the largest positive eigenvalue of $-K_{\rm stat}^2$ exists, and its square root is $s_{\rm stat}=\|K_{\rm stat}\|$.
+
+For Gauss--Legendre nodes $t_i$ and weights $w_i$, the Nystr\"om matrix is
+\[
+M_{ij}=\sqrt{w_i}\,\frac12(t_i-t_j)|t_i-t_j|\,\sqrt{w_j}.
+\]
+Let $v_i=\sqrt{w_i}$ be the unit vector representing the constant function and set $P=I-vv^T$. The largest singular value of $PMP$ approximates $\|K_{\rm stat}\|$.
+
+\section{Details of exact recovery and realization by stationary waveforms}
+The unrestricted recovery construction in Theorem~\ref{thm:jacobi-sharp} lifts the quadratic optimizer to a ray in the exact endpoint map. Products of an odd number of STF control matrices return to the symmetric subspace, so the cubic term in the antisymmetric endpoint channel vanishes and the next term after quadratic order is quartic. Along $A_\rho=\rho A_*$, the cost is exactly $Q=2\rho^2$ while
+\[
+\omega=2s_0\rho^2+O(\rho^4).
+\]
+The endpoint map is analytic in $\rho$, and therefore
+\[
+\frac{d\omega}{d\rho}=4s_0\rho+O(\rho^3)>0
+\]
+for sufficiently small $\rho>0$. Exact small positive targets follow from one-sided monotonicity rather than the ordinary inverse-function theorem at $\rho=0$, where the derivative vanishes. Reversing the sign of $\beta_*$ yields the negative branch.
+
+The stationary problem has the same structure, except that the optimizer is taken from the top singular pair of $K_{\rm stat}$. Starting from a real unit eigenvector
+\[
+-K_{\rm stat}^2\beta_*=s_{\rm stat}^2\beta_*,
+\]
+set $\alpha_*=K_{\rm stat}\beta_*/s_{\rm stat}$. Since $\alpha_*,\beta_*\in\mathcal U_0$, the ray $\rho A_*$ preserves the tangent-space stationarity constraints for all amplitudes. The reconstructed strain
+\[
+p_\rho(t)=2\rho\int_0^t(t-s)\alpha_*(s)ds,\qquad
+q_\rho(t)=2\rho\int_0^t(t-s)\beta_*(s)ds
+\]
+satisfies
+\[
+p_\rho(0)=q_\rho(0)=p'_\rho(0)=q'_\rho(0)=p'_\rho(1)=q'_\rho(1)=0.
+\]
+Thus it is a physically admissible tangent waveform with an initially zero reference, stationary in/out behavior, and an arbitrary allowed constant final shear. This closes the admissibility step required to transfer sharpness from the unrestricted class to the physical stationary class.
+
+\section{Bel--Robinson normalization}
+We fix the explicit $1/4$ convention in Eq.~\eqref{eq:BR-def}. In vacuum, the null-screen Weyl tidal data reduce to two real degrees of freedom. With $m=(e_1+ie_2)/\sqrt2$ and $T=\alpha\sigma_3+\beta\sigma_1$, the Newman--Penrose scalar $\Psi_0=C(k,m,k,m)$ agrees, up to the overall sign convention, with $\alpha+i\beta$. Hence
+\[
+|\Psi_0|^2=\alpha^2+\beta^2=\frac12\tr(T^2).
+\]
+Under the normalization in Eq.~\eqref{eq:BR-def}, the fourfold null contraction is $B(k,k,k,k)=|\Psi_0|^2$, so
+\[
+B(k,k,k,k)=|\Psi_0|^2=\frac12\tr(T^2).
+\]
+This gives Eqs.~\eqref{eq:Q} and \eqref{eq:control}. Other normalizations of the Bel--Robinson tensor differ by numerical factors, so the explicit factor $1/4$ must be kept fixed when comparing formulas.
+
+\section{Perturbative order and order of limits}
+The Bondi/Jacobi relation is a leading radiation-zone statement. Let $C_{AB}=\eps C_{AB}^{(1)}+O(\eps^2)$ and $h_{AB}^{TT}=-C_{AB}/r+O(r^{-2})$. Our notation $X^{(2)}$ denotes the quadratic perturbative coefficient in
+\[
+X(\eps)=X^{(0)}+\eps X^{(1)}+\eps^2X^{(2)}+O(\eps^3).
+\]
+In particular,
+\[
+Q_\gamma(\eps)=\eps^2Q_\gamma^{(2)}+O(\eps^3),\quad
+\omega_\gamma(\eps)=\eps^2\omega_\gamma^{(2)}+O(\eps^3),\quad
+\Delta\Psi_{\rm H}(\eps)=\eps^2\Delta\Psi_{\rm H}^{(2)}+O(\eps^3).
+\]
+The inner $\eps^{-2}$ limit in Eq.~\eqref{eq:iterated-limit} extracts these quadratic coefficients before the limit $r\to\infty$ is taken. We therefore do not claim a finite-$r$, finite-amplitude theorem in which the $O(\eps^3)$ and $O(r^{-3})$ remainders are controlled simultaneously by one uniform constant.
+
+\section{Reproducibility ledger and stationarity audit}
+We distinguish analytic proof from floating-point validation. The numerical calculations check that the unrestricted $K_0$ optimizer does not automatically satisfy the mean-zero stationarity constraints, the Nystr\"om convergence of $P_0K_0P_0$, and the exact-Jacobi recovery at small amplitude using the top singular pair. The sharp coefficient itself follows analytically from compact-operator theory; the decimal value $71.13876223\ldots$ is used only as numerical validation.
+
+\begin{thebibliography}{99}
+\bibitem{Flanagan2019}
+E. E. Flanagan, A. M. Grant, A. I. Harte, and D. A. Nichols,
+``Persistent gravitational wave observables: General framework,''
+Phys. Rev. D 99, 084044 (2019), arXiv:1901.00021, DOI: 10.1103/PhysRevD.99.084044.
+
+\bibitem{Flanagan2020}
+E. E. Flanagan, A. M. Grant, A. I. Harte, and D. A. Nichols,
+``Persistent gravitational wave observables: Nonlinear plane wave spacetimes,''
+Phys. Rev. D 101, 104033 (2020), arXiv:1912.13449, DOI: 10.1103/PhysRevD.101.104033.
+
+\bibitem{GrantNichols2022}
+A. M. Grant and D. A. Nichols,
+``Persistent gravitational wave observables: Curve deviation in asymptotically flat spacetimes,''
+Phys. Rev. D 105, 024056 (2022), arXiv:2109.03832, DOI: 10.1103/PhysRevD.105.024056; Erratum Phys. Rev. D 107, 109902 (2023).
+
+\bibitem{SerajOblak2023}
+A. Seraj and B. Oblak,
+``Gyroscopic Gravitational Memory,''
+JHEP 11, 057 (2023), arXiv:2112.04535, DOI: 10.1007/JHEP11(2023)057.
+
+\bibitem{SerajNeogi2023}
+A. Seraj and T. Neogi,
+``Memory effects from holonomies,''
+Phys. Rev. D 107, 104034 (2023), arXiv:2206.14110, DOI: 10.1103/PhysRevD.107.104034.
+
+\bibitem{FayeSeraj2025}
+G. Faye and A. Seraj,
+``Gyroscopic Gravitational Memory from quasi-circular binary systems,''
+Class. Quantum Grav. 42, 035005 (2025), arXiv:2409.02624, DOI: 10.1088/1361-6382/ada339.
+
+\bibitem{Harte2025}
+A. I. Harte, T. B. Mieling, M. A. Oancea, and E. Steininger,
+``Gravitational wave memory and its effects on particles and fields,''
+Phys. Rev. D 111, 024034 (2025), arXiv:2407.00174, DOI: 10.1103/PhysRevD.111.024034.
+
+\bibitem{FerrandoSaez2012}
+J. J. Ferrando and J. A. S\'aez,
+``On the Bel radiative gravitational fields,''
+Class. Quantum Grav. 29, 075012 (2012), arXiv:1111.2755, DOI: 10.1088/0264-9381/29/7/075012.
+
+\bibitem{Hahmann2005}
+S. Hahmann, B. Sauvage, and G.-P. Bonneau,
+``Area preserving deformation of multiresolution curves,''
+Comput. Aided Geom. Des. 22, 349--367 (2005), DOI: 10.1016/j.cagd.2005.01.006.
+
+\bibitem{Ferone2016}
+V. Ferone, B. Kawohl, and C. Nitsch,
+``The elastica problem under area constraint,''
+Math. Ann. 365, 987--1015 (2016), arXiv:1411.6100, DOI: 10.1007/s00208-015-1284-y.
+\end{thebibliography}

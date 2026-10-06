@@ -1,0 +1,129 @@
+\section{Frame dependence and scope}
+\subsection{Why the initially shear-free frame is required}
+Under a time-independent shear shift
+\[
+C_{AB}\mapsto C_{AB}+S_{AB},
+\]
+the news is unchanged, but the hard functional changes as
+\[
+\bar\Phi_{\rm H}\mapsto\bar\Phi_{\rm H}
+-\frac18\Delta C_{AB}\widetilde S^{AB}.
+\]
+By contrast, the chord-closed area in Eq.~\eqref{eq:area} is invariant under $(p,q)\mapsto(p+p_0,q+q_0)$. Therefore the Jacobi area cannot in general be identified with the hard term alone in an arbitrary constant-shear reference. The initially shear-free frame is not merely a notational convenience; it is a physical convention required for the hard-component relation used here.
+
+\subsection{The fixed null window as auxiliary structure}
+The quantity $Q_\gamma$ is not intrinsic to the waveform alone; it also depends on the chosen null window $\gamma$. For example, keep the curvature support and radiative history fixed, but append stationary curvature-free and news-free intervals at both ends so that the same $du/d\lambda=1$ normalization extends the window length from $L$ to $L'>L$. Then $\int_\gamma B(k^4)d\lambda$ and the hard memory remain unchanged, while
+\[
+Q_{\gamma'}=\left(\frac{L'}{L}\right)^3Q_\gamma.
+\]
+Thus, for the same physical waveform, extending the physical window can make $Q_\gamma$ arbitrarily large. The minimum-action law in this paper is therefore a dimensionless variational problem defined separately for each fixed window; it does not compare $Q_\gamma$ values for different windows as though they were a single detector exposure. This is distinct from an affine reparametrization of the same physical interval, under which $Q_\gamma$ is invariant as shown in Sec.~II.
+
+\subsection{Why stationarity changes the optimal coefficient}
+In the unrestricted problem, the top singular subspace of $K_0$ provides the recovery family. Stationary radiation, however, requires $\int\alpha=\int\beta=0$. This imposes a codimension-one closed constraint on each polarization and cannot be removed by dense approximation. Numerically, the two constraints $\int\beta=0$ and $\int K_0\beta=0$ are independent on the unrestricted top singular plane, so the old optimizer does not lie in the stationary class. The correct tangent-space operator is $K_{\rm stat}=P_0K_0P_0$, and $\|K_{\rm stat}\|<\|K_0\|$, so the sharp curvature-action coefficient increases.
+
+We do not impose zero final shear. If one were also to require $p(1)=q(1)=0$, then in addition to the mean-zero conditions one would have the first-moment constraints
+\[
+\int_0^1(1-t)\alpha(t)\,dt=0,\qquad
+\int_0^1(1-t)\beta(t)\,dt=0.
+\]
+The admissible subspace and compressed operator would then differ from $K_{\rm stat}$, and the best coefficient could change. The value $71.13876223\ldots$ derived here must therefore not be transferred to that additional-constraint problem.
+
+\subsection{Claims not made}
+We do not claim:
+\begin{itemize}
+\item a sharp lower bound for the full gyroscopic gravitational memory;
+\item a sharp lower bound for spin memory;
+\item a theorem for the hard component alone that is invariant under arbitrary BMS-frame changes;
+\item a global finite-amplitude minimum-action law;
+\item that every recovery TT/Bondi datum constructed here admits a global realization by a complete asymptotically flat vacuum Einstein spacetime;
+\item an exact all-orders identity at finite $r$;
+\item a lower bound on Bondi, Isaacson, radiated, or detector energy;
+\item the discovery of gyroscopic gravitational memory, the Bel--Robinson tensor, or Jacobi memory tensors themselves.
+\end{itemize}
+
+Accordingly, the ``physical class'' of Theorem~\ref{thm:main-physical} is the weak-amplitude, leading-radiation-zone TT/Bondi radiative-data class consistent with the standard initially shear-free convention, not the full global solution space of the Einstein equations. The quantities compared are the quadratic perturbative coefficients $Q_\gamma^{(2)}$ and $\Delta\Psi_{\rm H}^{(2)}$, not the full finite-amplitude $Q_\gamma$ and $\Delta\Psi_{\rm H}$. Global nonlinear realizability and a finite-amplitude value function remain separate problems.
+
+\section{Numerical validation and reproducibility}
+We distinguish analytic proof from numerical validation. The logic of Eqs.~\eqref{eq:sharp-jacobi}, \eqref{eq:stationary-sharp}, \eqref{eq:bridge}, and \eqref{eq:main-physical-value} is analytic. The calculations below validate normalization, sign, endpoint extraction, restricted spectral values, and counterexample-oriented test cases.
+
+
+\subsection{\texorpdfstring{Unrestricted $K_0$ and exact Jacobi recovery}{Unrestricted K0 and exact Jacobi recovery}}
+Gauss--Legendre Nystr\"om discretization gives
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+nodes & $\|K_0\|$\\
+\midrule
+50&0.0910384416041\\
+100&0.0910384384527\\
+200&0.0910384382516\\
+300&0.0910384382407\\
+500&0.0910384382384\\
+\bottomrule
+\end{tabular}
+\end{center}
+Inserting the same discrete top singular pair into the exact Jacobi ODE gives
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+$\rho$ & $Q_\gamma/|\omega_\gamma|$\\
+\midrule
+0.03&10.98435328\\
+0.01&10.98436922\\
+0.003&10.98437103\\
+0.001&10.98437118\\
+\bottomrule
+\end{tabular}
+\end{center}
+which converges to $\|K_0\|^{-1}=10.98437121\ldots$. Here $\rho$ is the amplitude along the recovery ray $A_\rho=\rho A_*$ and is distinct from the physical perturbation parameter $\eps$. Because odd orders vanish in the antisymmetric Jacobi channel, $\omega_\gamma[A_\rho]=2s_0\rho^2+O(\rho^4)$, consistent with the observed $O(\rho^2)$ convergence of the ratio.
+
+\subsection{Stationary spectrum and exact recovery}
+Discretizing the mean-zero projection and computing the largest singular value of $P_0MP_0$ gives
+\begin{center}
+\begin{tabular}{rrr}
+\toprule
+nodes&$\|K_{\rm stat}\|$&$2/\|K_{\rm stat}\|$\\
+\midrule
+50&0.0281140528760&71.13880054294\\
+100&0.0281140670547&71.13876466581\\
+200&0.0281140679578&71.13876238062\\
+300&0.0281140680065&71.13876225721\\
+500&0.0281140680170&71.13876223067\\
+\bottomrule
+\end{tabular}
+\end{center}
+A continuous reconstructed mean-zero top singular pair propagated through the exact Jacobi ODE gives
+\begin{center}
+\begin{tabular}{rr}
+\toprule
+$\rho$ & $Q_\gamma/|\omega_\gamma|$\\
+\midrule
+0.03&35.56942171300\\
+0.01&35.56938562391\\
+0.003&35.56938151880\\
+0.001&35.56938115793\\
+\bottomrule
+\end{tabular}
+\end{center}
+converging to $\|K_{\rm stat}\|^{-1}=35.5693811\ldots$. The ratio again has $O(\rho^2)$ error because of the even-order structure above. The reconstructed strain satisfies $p'(1)=q'(1)=0$ to numerical precision. With $\|\alpha_*\|=\|\beta_*\|=1$, one orientation of the numerical SVD gives $p_f/\rho\simeq-0.47863$ and $q_f/\rho\simeq0.30730$. The simultaneous sign-reversed pair represents the same optimizer because of the global sign ambiguity of the singular vectors. The final-shear magnitude, independent of this global sign and of a polarization-basis rotation, is $\sqrt{p_f^2+q_f^2}/\rho\simeq0.56878$. The theorem therefore allows a constant displacement-memory component. These values check the implementation of the analytic recovery construction; they are not used to prove the restricted theorem.
+
+\subsection{Waveform checks of the bridge relation}
+Let $W=\int(p\dot q-q\dot p)du$. In the initially zero reference, $\omega^{(2)}=W/2$ and $\Delta\Psi_{\rm H}^{(2)}=-W/4$. Representative test families give
+\begin{center}
+\begin{tabular}{lrrrr}
+\toprule
+waveform family&$W$&$\omega^{(2)}$&$\Delta\Psi_{\rm H}^{(2)}$&ratio\\
+\midrule
+smooth circular polarization&2.35619447&1.17809724&-0.58904862&-2.000000\\
+opposite helicity&-2.35619447&-1.17809724&0.58904862&-2.000000\\
+elliptical polarization&1.22522112&0.61261056&-0.30630528&-2.000000\\
+fixed axis&$\simeq0$&$\simeq0$&$\simeq0$&both zero\\
+endpoint memory&-0.62590250&-0.31295125&0.15647563&-2.000000\\
+helicity cancellation&$\simeq0$&$\simeq0$&$\simeq0$&both zero\\
+\bottomrule
+\end{tabular}
+\end{center}
+As a counterexample-oriented baseline test, adding $(p_0,q_0)=(0.35,-0.22)$ to the endpoint-memory waveform leaves the chord-closed area unchanged, $-0.3129512514\to-0.3129512515$, while the hard gyroscopic functional changes from $0.1564756257$ to $0.1124756258$. This falsifies a hard-component-only identity in an arbitrary constant-shear reference and supports the initially shear-free restriction.
+
+\subsection{Audit detecting the inadmissibility of the old optimizer}
+Choose an orthonormal basis of the unrestricted top singular subspace of $K_0$. Normalize the two constraint rows associated with $\int\beta=0$ and $\int K_0\beta=0$ by $\|K_0\|$. The absolute determinant of the resulting $2\times2$ matrix is invariant under orthogonal changes of basis and is approximately $0.90925$ at $n=500$. The same number equals the squared norm of the orthogonal projection of the constant function onto the unrestricted top singular plane. Thus about $90.9\%$ of the constant mode lies in that plane, and the two stationarity constraints are independent on it. This diagnoses why the unrestricted top singular subspace does not automatically satisfy stationarity. The sharpness of the new coefficient itself follows analytically from Theorem~\ref{thm:stationary-sharp}, not from this numerical audit.

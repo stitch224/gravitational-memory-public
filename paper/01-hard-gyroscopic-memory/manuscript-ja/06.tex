@@ -1,0 +1,143 @@
+\appendix
+\section{規約一覧}
+\begin{center}
+\begin{tabular}{p{0.32\linewidth}p{0.58\linewidth}}
+\toprule
+項目&規約\\
+\midrule
+計量の符号&$(-+++)$\\
+Bondi ニュース&$N_{AB}=\partial_u C_{AB}$\\
+初期フレーム&$C_{AB}(-\infty)=0$\\
+スクリーンの向き&$\epsilon_{12}=+1$\\
+双対シアー&$\widetilde C_{AB}=\epsilon_{CA}C^C{}_B$\\
+TT/Bondi 対応&$C_{AB}=-rh^{TT}_{AB}+O(r^0)$（偏光規約を固定）\\
+光学的潮汐行列&$T_{AB}=-R(e_A,k,e_B,k)$\\
+Bel--Robinson テンソル&式\eqref{eq:BR-def}、明示的な $1/4$ の係数\\
+曲率曝露&$Q_\gamma=L^3\int B(k^4)d\lambda$（$du/d\lambda=1$ の代表では $d\lambda=du$）\\
+先頭物理コスト&$Q_\gamma(\eps)=\eps^2Q_\gamma^{(2)}+O(\eps^3)$\\
+非線形 Jacobi スカラー&$\operatorname{skew}(S_{11}+S_{22})=\omega_\gamma J_2$\\
+定常制御空間&$\mathcal U_0=\{f\in L^2(0,1):\int f=0\}$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{\texorpdfstring{$K_0$ と制限作用素のスペクトル構造}{K0 と制限作用素のスペクトル構造}}
+$K_0$ はコンパクト反自己共役作用素であり、$-K_0^2$ は正のコンパクト自己共役作用素である。最大固有値 $s^2$ は $\|K_0\|^2$ に等しい。また分布微分または弱微分の意味で
+\[
+(K_0f)'''=2f
+\]
+なので、固有方程式を境界条件を伴う ODE 系に変換できる。本稿では厳密な定数を作用素ノルムで定義し、十進小数は証明に用いない。
+
+定常射影について、$k_0(t,s)=\frac12(t-s)|t-s|$ と
+\[
+m(t)=\int_0^1k_0(t,s)ds=\frac{t^3-(1-t)^3}{6}
+\]
+を置くと、$P_0K_0P_0$ は核
+\begin{equation}
+k_{\rm stat}(t,s)=k_0(t,s)-m(t)+m(s)
+\label{eq:kstat-kernel}
+\end{equation}
+を持つ。これは $k_{\rm stat}(s,t)=-k_{\rm stat}(t,s)$ であり二乗可積分なので、$K_{\rm stat}$ は $\mathcal U_0$ 上のコンパクト反自己共役作用素である。さらに $(K_{\rm stat}f)'''=2f$ だから $K_{\rm stat}\neq0$。従って $-K_{\rm stat}^2$ の最大正固有値が存在し、その平方根が $s_{\rm stat}=\|K_{\rm stat}\|$ である。
+
+Gauss--Legendre 節点 $t_i$ と重み $w_i$ に対する Nystr\"om 行列
+\[
+M_{ij}=\sqrt{w_i}\,\frac12(t_i-t_j)|t_i-t_j|\,\sqrt{w_j}
+\]
+を用いる。定数関数に対応する単位ベクトル $v_i=\sqrt{w_i}$ に対して $P=I-vv^T$ と置くと、$PMP$ の最大特異値が $\|K_{\rm stat}\|$ の浮動小数点近似を与える。
+
+\section{厳密回復構成と定常波形による実現の詳細}
+定理\ref{thm:jacobi-sharp}の無拘束回復構成は、二次最適化波形を厳密終端写像上の半直線へ持ち上げる。 STF 制御行列の積では奇数次数の積は対称部分空間に戻るため、反対称終端チャネルの三次項は消え、二次項の次は四次項である。$A_\rho=\rho A_*$ に沿って $Q=2\rho^2$ は厳密で、$\omega=2s_0 \rho^2+O(\rho^4)$ である。終端写像は $\rho$ に解析的なので
+\[
+\frac{d\omega}{d\rho}=4s_0\rho+O(\rho^3)>0
+\]
+が十分小さい $\rho>0$ で成り立つ。従って $\rho=0$ で微分が消える通常の逆関数定理には依存せず、正の片側単調性から近似目標ではない厳密な $\omega$ を実現する $\rho(\omega)$ が存在する。$\beta_*$ を反転した分枝では導関数が負になり、小さい負の目標も同様に厳密回復される。
+
+定常問題も同じ構造を持つが、最適化波形を $K_{\rm stat}$ の最大特異値対から取る点だけが異なる。実単位固有ベクトル $-K_{\rm stat}^2\beta_*=s_{\rm stat}^2\beta_*$ から $\alpha_*=K_{\rm stat}\beta_*/s_{\rm stat}$ と構成できるので、対は実関数として選べる。$\alpha_*,\beta_*\in\mathcal U_0$ なので、半直線 $\rho A_*$ は全振幅で接線方向の定常制約を保存する。また
+\[
+p_\rho(t)=2\rho\int_0^t(t-s)\alpha_*(s)ds,\qquad
+q_\rho(t)=2\rho\int_0^t(t-s)\beta_*(s)ds
+\]
+は
+\[
+p_\rho(0)=q_\rho(0)=p'_\rho(0)=q'_\rho(0)=p'_\rho(1)=q'_\rho(1)=0
+\]
+を満たす。従って、初期ゼロ基準、入出力定常、任意の一定最終シアーを同時に許す物理的な接線方向の波形履歴である。これが、無拘束クラスでの鋭さから物理クラスでの鋭さへ移す際に不足していた許容性の確認を閉じる。
+
+\section{Bel--Robinson 規格化の確認}
+式\eqref{eq:BR-def}の $1/4$ 規約を固定する。真空のヌル・スクリーンでは Weyl 潮汐データが二つの実自由度に縮退する。$m=(e_1+i e_2)/\sqrt2$ と置くと、$T=\alpha\sigma_3+\beta\sigma_1$ に対して $\Psi_0=C(k,m,k,m)$ は本稿の符号規約では全体符号を除き $\alpha+i\beta$ に一致する。従って
+\[
+|\Psi_0|^2=\alpha^2+\beta^2=\frac12\tr(T^2).
+\]
+式\eqref{eq:BR-def}の明示的な $1/4$ 規約では四重ヌル縮約が $B(k,k,k,k)=|\Psi_0|^2$ となるため、
+\[
+B(k,k,k,k)=|\Psi_0|^2=\frac12\tr(T^2).
+\]
+これより式\eqref{eq:Q},\eqref{eq:control}が従う。異なる Bel--Robinson 規格化を使う文献とは係数が変わるため、比較時にはこの $1/4$ を固定する。
+
+\section{摂動次数と極限の順序}
+Bondi/Jacobi の対応関係は放射域の先頭次数に関する主張である。$C_{AB}=\eps C_{AB}^{(1)}+O(\eps^2)$, $h_{AB}^{TT}=-C_{AB}/r+O(r^{-2})$ とする。本稿の $X^{(2)}$ は
+\[
+X(\eps)=X^{(0)}+\eps X^{(1)}+\eps^2X^{(2)}+O(\eps^3)
+\]
+における二次摂動\emph{係数}を表す。特に
+\[
+Q_\gamma(\eps)=\eps^2Q_\gamma^{(2)}+O(\eps^3),\quad
+\omega_\gamma(\eps)=\eps^2\omega_\gamma^{(2)}+O(\eps^3),\quad
+\Delta\Psi_{\rm H}(\eps)=\eps^2\Delta\Psi_{\rm H}^{(2)}+O(\eps^3).
+\]
+式\eqref{eq:iterated-limit}の内側の $\eps^{-2}$ 極限はこれらの二次係数を抽出し、その後 $r\to\infty$ を取る。従って、$O(\eps^3)$ と $O(r^{-3})$ の剰余を一つの一様定数で同時制御する有限 $r$・有限振幅定理は主張しない。
+
+\section{再現性一覧と定常性監査}
+解析証明と浮動小数点による数値検証を区別する。数値計算は、全空間の $K_0$ 最適化波形が平均ゼロの定常制約を自動的には満たさないこと、$P_0K_0P_0$ の Nystr\"om 収束、および最大特異値対を用いた小振幅での厳密 Jacobi 回復を検算する。最良係数の論理はコンパクト作用素による解析から成立し、浮動小数点値 $71.13876223\ldots$ は数値検証としてのみ用いる。
+
+\begin{thebibliography}{99}
+\bibitem{Flanagan2019}
+E. E. Flanagan, A. M. Grant, A. I. Harte, and D. A. Nichols,
+``Persistent gravitational wave observables: General framework,''
+Phys. Rev. D 99, 084044 (2019), arXiv:1901.00021, DOI: 10.1103/PhysRevD.99.084044.
+
+\bibitem{Flanagan2020}
+E. E. Flanagan, A. M. Grant, A. I. Harte, and D. A. Nichols,
+``Persistent gravitational wave observables: Nonlinear plane wave spacetimes,''
+Phys. Rev. D 101, 104033 (2020), arXiv:1912.13449, DOI: 10.1103/PhysRevD.101.104033.
+
+\bibitem{GrantNichols2022}
+A. M. Grant and D. A. Nichols,
+``Persistent gravitational wave observables: Curve deviation in asymptotically flat spacetimes,''
+Phys. Rev. D 105, 024056 (2022), arXiv:2109.03832, DOI: 10.1103/PhysRevD.105.024056; Erratum Phys. Rev. D 107, 109902 (2023).
+
+\bibitem{SerajOblak2023}
+A. Seraj and B. Oblak,
+``Gyroscopic Gravitational Memory,''
+JHEP 11, 057 (2023), arXiv:2112.04535, DOI: 10.1007/JHEP11(2023)057.
+
+\bibitem{SerajNeogi2023}
+A. Seraj and T. Neogi,
+``Memory effects from holonomies,''
+Phys. Rev. D 107, 104034 (2023), arXiv:2206.14110, DOI: 10.1103/PhysRevD.107.104034.
+
+\bibitem{FayeSeraj2025}
+G. Faye and A. Seraj,
+``Gyroscopic Gravitational Memory from quasi-circular binary systems,''
+Class. Quantum Grav. 42, 035005 (2025), arXiv:2409.02624, DOI: 10.1088/1361-6382/ada339.
+
+\bibitem{Harte2025}
+A. I. Harte, T. B. Mieling, M. A. Oancea, and E. Steininger,
+``Gravitational wave memory and its effects on particles and fields,''
+Phys. Rev. D 111, 024034 (2025), arXiv:2407.00174, DOI: 10.1103/PhysRevD.111.024034.
+
+\bibitem{FerrandoSaez2012}
+J. J. Ferrando and J. A. S\'aez,
+``On the Bel radiative gravitational fields,''
+Class. Quantum Grav. 29, 075012 (2012), arXiv:1111.2755, DOI: 10.1088/0264-9381/29/7/075012.
+
+\bibitem{Hahmann2005}
+S. Hahmann, B. Sauvage, and G.-P. Bonneau,
+``Area preserving deformation of multiresolution curves,''
+Comput. Aided Geom. Des. 22, 349--367 (2005), DOI: 10.1016/j.cagd.2005.01.006.
+
+\bibitem{Ferone2016}
+V. Ferone, B. Kawohl, and C. Nitsch,
+``The elastica problem under area constraint,''
+Math. Ann. 365, 987--1015 (2016), arXiv:1411.6100, DOI: 10.1007/s00208-015-1284-y.
+\end{thebibliography}

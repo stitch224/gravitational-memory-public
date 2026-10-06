@@ -4,7 +4,8 @@ This repository contains public research artifacts associated with a series of p
 
 ## Papers
 
-- **Paper 1** — forthcoming
+- **Paper 01 — Hard Gyroscopic Gravitational-Wave Memory**
+  - English and Japanese manuscripts, PDFs, and reproducibility materials: `paper/01-hard-gyroscopic-memory/`
 - Future papers will be added as separate directories.
 
-Each paper directory will contain the code, data, and reproducibility materials specific to that work.
+Each paper directory contains the manuscript and the code, data, and reproducibility materials specific to that work.
