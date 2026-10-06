@@ -1,0 +1,196 @@
+\section{Geometric and physical setup}
+\subsection{Bondi frame and hard gyroscopic memory}
+Let $(u,r,\theta^A)$ be Bondi coordinates, with
+\[
+g_{AB}=r^2\gamma_{AB}+rC_{AB}+O(1),\qquad N_{AB}=\partial_u C_{AB}.
+\]
+As the reference for the hard/soft split, we fix the standard initially shear-free vacuum frame
+\begin{equation}
+C_{AB}(u=-\infty)=0.
+\label{eq:early-shear-free}
+\end{equation}
+The final shear $\Delta C_{AB}$ may be nonzero, so ordinary displacement memory is not excluded.
+
+Following the conventions of Seraj--Oblak and Faye--Seraj, define $\widetilde C_{AB}=\epsilon_{CA}C^C{}_B$. The hard part of the gyroscope precession is
+\begin{equation}
+\widehat\Omega_{\rm H}=-\frac18N_{AB}\widetilde C^{AB},
+\label{eq:hard-precession}
+\end{equation}
+and the physical orientation angle in the radiation zone is
+\begin{equation}
+\Delta\Psi_{\rm H}=\frac{1}{r^2}\bar\Phi_{\rm H}+O(r^{-3}),\qquad
+\bar\Phi_{\rm H}=-\frac18\int du\,N_{AB}\widetilde C^{AB}.
+\label{eq:hard-memory}
+\end{equation}
+We refer to $\Delta\Psi_{\rm H}$ as the hard/helicity gyroscopic gravitational memory. It is neither the full gyroscopic memory nor the spin memory \cite{SerajOblak2023,FayeSeraj2025}.
+
+\subsection{Null Jacobi system}
+Consider an auxiliary null-geodesic segment $\gamma:[\lambda_0,\lambda_1]\to M$ crossing the radiation in a four-dimensional Lorentzian spacetime. Let $\lambda$ be an affine parameter, $k=d\gamma/d\lambda$, and $L=\lambda_1-\lambda_0>0$. The segment $\gamma$ is not the timelike gyroscope worldline. We also exclude an outgoing null generator comoving with the wave on $u={\rm const.}$; instead we choose a radiation-crossing null direction with $du/d\lambda\neq0$ so that the leading radiative curvature is sampled. We further work in a local radiation-zone patch with $L$ fixed and $L/r\to0$ as $r\to\infty$, which pushes angular and radial drift effects along $\gamma$ beyond leading order in $1/r$. The screen basis is adapted so that, in this local patch, its transverse components agree with the Bondi/TT polarization dyad. These are geometric hypotheses of the main theorem, not a direction-independent statement for arbitrary null directions at finite $r$.
+
+At leading asymptotically flat, locally plane-wave order, $du/d\lambda$ is constant. Using positive affine freedom we set $du/d\lambda=1$, so that the retarded-time width of the selected stationary-to-stationary window equals $L$. Let $e_A$ be a parallel-propagated orthonormal screen basis and define
+\begin{equation}
+T_{AB}(\lambda)=-R(e_A,k,e_B,k).
+\label{eq:tidal}
+\end{equation}
+If $\Ric(k,k)=0$, then $T$ is a symmetric trace-free $2\times2$ matrix.
+
+With $t=(\lambda-\lambda_0)/L$, define the dimensionless profile
+\[
+A(t)=L^2T(\lambda_0+Lt).
+\]
+The Jacobi fundamental matrix obeys
+\begin{equation}
+\frac{d\Phi}{dt}=\begin{pmatrix}0&I_2\\ A(t)&0\end{pmatrix}\Phi,
+\qquad \Phi(0)=I_4.
+\label{eq:jacobi}
+\end{equation}
+Writing the free-propagation matrix as $F_0(s)=\begin{psmallmatrix}I_2&sI_2\\0&I_2\end{psmallmatrix}$, define the scattering matrix with the flat drift removed by
+\begin{equation}
+S_\gamma=F_0(-1)\Phi(1).
+\label{eq:S}
+\end{equation}
+For the block decomposition $S_\gamma=(S_{ij})$, define the real scalar $\omega_\gamma$ through
+\begin{equation}
+\operatorname{skew}(S_{11}+S_{22})=\omega_\gamma J_2,
+\qquad J_2=\begin{pmatrix}0&-1\\1&0\end{pmatrix}.
+\label{eq:omega-def}
+\end{equation}
+We call $\omega_\gamma$ the nonlinear Jacobi memory/scattering channel. In the plane-wave memory-tensor language, it corresponds to the antisymmetric combination of the diagonal Jacobi blocks \cite{Flanagan2020,Harte2025}.
+
+\subsection{Bel--Robinson curvature action}
+We use metric signature $(-+++)$ and normalize the Bel--Robinson tensor as
+\begin{equation}
+B_{abcd}=\frac14\left(C_{aecf}C_b{}^e{}_d{}^f+{}^\star C_{aecf}\,{}^\star C_b{}^e{}_d{}^f\right).
+\label{eq:BR-def}
+\end{equation}
+On a vacuum null screen,
+\begin{equation}
+B(k,k,k,k)=|\Psi_0|^2=\frac12\tr(T^2).
+\label{eq:BR-tidal}
+\end{equation}
+We therefore define
+\begin{equation}
+Q_\gamma:=L^3\int_{\lambda_0}^{\lambda_1}B(k,k,k,k)\,d\lambda
+=\frac12\int_0^1\tr(A(t)^2)\,dt.
+\label{eq:Q}
+\end{equation}
+Under a positive affine reparametrization $\lambda'=a\lambda+b$ with $a>0$, one has $L'=aL$, $k'=a^{-1}k$, $d\lambda'=a\,d\lambda$, and $B(k',k',k',k')=a^{-4}B(k,k,k,k)$. Hence $L'^3d\lambda'\,B(k'^4)=L^3d\lambda\,B(k^4)$. Thus the normalization $du/d\lambda=1$ merely selects a representative of the affine-equivalence class of the fixed radiation-crossing segment and does not spoil the affine invariance of $Q_\gamma$. Changing the segment endpoints, the radiation-crossing null direction, or the screen identification instead defines a different auxiliary-probe problem; $Q_\gamma$ is not window independent or direction independent.
+
+\begin{remark}
+$Q_\gamma$ is a dimensionless windowed null action quadratic in the Weyl curvature. It is not an exposure measured on the gyroscope worldline, the Bondi mass loss, Isaacson effective stress-energy, radiated energy, or detector energy.
+\end{remark}
+
+\section{Jacobi memory and the minimum-action problem}
+Using the STF basis
+\[
+\sigma_3=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+\sigma_1=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+\]
+write
+\begin{equation}
+A(t)=\alpha(t)\sigma_3+\beta(t)\sigma_1,
+\qquad Q_\gamma=\|\alpha\|_2^2+\|\beta\|_2^2.
+\label{eq:control}
+\end{equation}
+
+\begin{definition}
+Define
+\begin{equation}
+(K_0f)(t)=\frac12\int_0^1(t-s)|t-s|f(s)\,ds,
+\qquad s_0:=\|K_0\|.
+\label{eq:K0}
+\end{equation}
+The kernel is antisymmetric, so $K_0^*=-K_0$; it is also Hilbert--Schmidt and hence compact.
+\end{definition}
+
+\begin{lemma}[Small-amplitude expansion of the exact endpoint map]
+\label{lem:endpoint-expansion}
+For sufficiently small $A$, there exists $C>0$ such that
+\begin{equation}
+\omega_\gamma[A]=2\langle\alpha,K_0\beta\rangle+R_\omega[A],
+\qquad |R_\omega[A]|\le C Q_\gamma[A]^2.
+\label{eq:endpoint-expansion}
+\end{equation}
+\end{lemma}
+\begin{proof}
+Write each Jacobi column of Eq.~\eqref{eq:jacobi} as $X''=AX$. Then
+\[
+X(t)=X(0)+tX'(0)+(\mathcal V_A X)(t),\qquad
+(\mathcal V_A X)(t):=\int_0^t(t-s)A(s)X(s)\,ds.
+\]
+Since the interval has unit length,
+\[
+\|\mathcal V_A X\|_\infty
+\le \|A\|_{L^1,F}\|X\|_\infty
+\le \|A\|_{L^2,F}\|X\|_\infty.
+\]
+Hence, for sufficiently small $\|A\|_{L^2,F}$, the Neumann--Volterra series converges absolutely and the terminal values $X(1)$ and $X'(1)$, and therefore $\Phi(1)$ and $\omega_\gamma[A]$, are analytic in $A$ near the origin. Let
+\[
+\mathcal V=\operatorname{span}\{\sigma_1,\sigma_3\},\qquad
+\mathcal E=\operatorname{span}\{I_2,J_2\}.
+\]
+Then $\mathcal V\mathcal V\subset\mathcal E$ and $\mathcal E\mathcal V\subset\mathcal V$. Consequently, any product of an odd number of $A(t_i)\in\mathcal V$ lies again in the symmetric space $\mathcal V$ and cannot contribute to the antisymmetric channel. The linear term is also symmetric. In the second-order time-ordered term, only the noncommuting part of the two STF basis matrices survives. Using $[\sigma_3,\sigma_1]=-2J_2$ yields the kernel $\frac12(t-s)|t-s|$ and therefore the leading term $2\langle\alpha,K_0\beta\rangle$. The next possible contribution is fourth order, so in a fixed neighborhood
+\[
+|R_\omega[A]|\le C_1\|A\|_{L^1,F}^4
+\le C_1\|A\|_{L^2,F}^4
+=C Q_\gamma^2.
+\]
+\end{proof}
+
+\section{Sharp minimum-action theorem}
+Define
+\begin{equation}
+\kappa_\Omega(\omega):=\inf\{Q_\gamma[A]:\omega_\gamma[A]=\omega\}.
+\label{eq:value}
+\end{equation}
+
+\begin{theorem}[Sharp law for the unrestricted nonlinear Jacobi channel]
+\label{thm:jacobi-sharp}
+\begin{equation}
+\boxed{\kappa_\Omega(\omega)=\frac{|\omega|}{\|K_0\|}+O(\omega^2),\qquad \omega\to0.}
+\label{eq:sharp-jacobi}
+\end{equation}
+The coefficient is sharp for the exact endpoint problem.
+\end{theorem}
+\begin{proof}
+By Cauchy--Schwarz and the arithmetic--geometric mean inequality,
+\begin{equation}
+2|\langle\alpha,K_0\beta\rangle|
+\le s_0(\|\alpha\|_2^2+\|\beta\|_2^2)=s_0Q_\gamma.
+\label{eq:quad-lower}
+\end{equation}
+Compactness implies that the norm of $K_0$ is attained. Choose a real unit vector $\beta_*$ in the top eigenspace of $-K_0^2$,
+\[
+-K_0^2\beta_*=s_0^2\beta_*,\qquad
+\alpha_*:=K_0\beta_*/s_0.
+\]
+Then $\|\alpha_*\|=\|\beta_*\|=1$ and $\langle\alpha_*,K_0\beta_*\rangle=s_0$. For $A_*=\alpha_*\sigma_3+\beta_*\sigma_1$, one has $Q_\gamma[A_*]=2$ and a quadratic memory coefficient $2s_0$, saturating Eq.~\eqref{eq:quad-lower}.
+
+For exact recovery, set $A_\rho=\rho A_*$. The preceding lemma gives
+\begin{equation}
+\omega_\gamma[A_\rho]=2s_0\rho^2+O(\rho^4),\qquad Q_\gamma[A_\rho]=2\rho^2.
+\label{eq:recovery-ray}
+\end{equation}
+Analyticity then yields
+\[
+\frac{d}{d\rho}\omega_\gamma[A_\rho]=4s_0\rho+O(\rho^3)>0
+\]
+for sufficiently small $\rho>0$. Thus we do not invoke the usual inverse-function theorem at $\rho=0$, where the derivative vanishes; instead, strict one-sided monotonicity gives a unique $\rho(\omega)>0$ for every sufficiently small positive target. Hence
+\[
+Q_\gamma[A_{\rho(\omega)}]=\frac{\omega}{s_0}+O(\omega^2).
+\]
+For negative targets replace $\beta_*$ by $-\beta_*$; the same one-sided argument gives the negative branch.
+
+Conversely, the recovery construction already implies $\kappa_\Omega(\omega)=O(|\omega|)$, so a minimizing sequence may be chosen with $Q_\gamma=O(|\omega|)$. Applying Eqs.~\eqref{eq:endpoint-expansion} and \eqref{eq:quad-lower} along that sequence gives
+\[
+|\omega|\le s_0Q_\gamma+C Q_\gamma^2.
+\]
+Since $Q_\gamma=O(|\omega|)$, this yields $Q_\gamma\ge |\omega|/s_0-O(\omega^2)$. Combining the lower and upper bounds proves Eq.~\eqref{eq:sharp-jacobi}.
+\end{proof}
+
+A Gauss--Legendre Nystr\"om calculation gives
+\begin{equation}
+\|K_0\|=0.09103843824\ldots,\qquad \|K_0\|^{-1}=10.98437121\ldots.
+\label{eq:numeric-k0}
+\end{equation}
+These decimal values are numerical validation only and do not define the theorem constant.

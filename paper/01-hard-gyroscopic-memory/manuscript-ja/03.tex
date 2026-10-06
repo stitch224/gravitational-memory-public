@@ -1,0 +1,258 @@
+\section{ジャイロスコピック・メモリーとの対応}
+\subsection{弱い TT 波の偏光面積}
+第2節で固定した局所放射域パッチと適合スクリーン上の同じ先頭放射データを、基準となる大きな Bondi 半径 $r$ での弱い TT ひずみとして
+\begin{equation}
+h^{TT}(u,r;\eps)=\eps\begin{pmatrix}p(u)&q(u)\\q(u)&-p(u)\end{pmatrix}+O(\eps^2)
+\label{eq:tt}
+\end{equation}
+とする。放射域では $p,q=O(r^{-1})$ である。以下では固定した $r$ で議論し、$r$ 引数を省略する。入射前後で放射が定常なら $\dot p(u_\pm)=\dot q(u_\pm)=0$ である。本節では
+\[
+X(\eps)=X^{(0)}+\eps X^{(1)}+\eps^2X^{(2)}+O(\eps^3)
+\]
+と書いたときの \emph{係数}を $X^{(2)}$ と表す。従って $\Delta\Psi_{\rm H}^{(2)}$ は full finite-amplitude memory でも $\eps^2$ を含む寄与そのものでもなく、二次摂動係数である。
+
+計量符号 $(-+++)$、式\eqref{eq:tidal}の $T_{AB}=-R(e_A,k,e_B,k)$、および本稿の outgoing/retarded-time 規約では、局所放射域パッチで $du/d\lambda=1$ と規格化し、スクリーン二脚を Bondi/TT 偏光二脚へ適合させた放射横断ヌル線に対して、先頭の type-N 放射曲率は
+\[
+R(e_A,k,e_B,k)=-\frac12\ddot h^{TT}_{AB}
++\text{(subleading in $1/r$ and nonlinear amplitude)}
+\]
+となる。従って先頭次数の潮汐プロファイルは $T=\frac12\ddot h^{TT}$ であり、Jacobi 側と Bondi/TT 側へ同じ $(p,q)$ を入力できる。ここで必要なのはこの固定した局所同定であって、任意の有限 $r$ のヌル方向について同じ $T$ が得られるという主張ではない。TT/Bondi 対応の全体符号は規約依存だが、$(p,q)$ を同時に反転しても以下の二次面積は変わらない。本稿では後述の式\eqref{eq:shear-strain}の符号を固定して全式を一貫させる。
+
+Jacobi チャネルの二次係数は、偏光平面 $(p,q)$ の弦で閉じた符号付き面積
+\begin{equation}
+\mathcal A_{\rm pol}[p,q]
+=\frac12\int_{u_-}^{u_+}(p\dot q-q\dot p)\,du
++\frac12[p_fq_i-p_iq_f]
+\label{eq:area}
+\end{equation}
+に等しく、
+\begin{equation}
+\omega_\gamma(\eps)=\eps^2\omega_\gamma^{(2)}+O(\eps^3),
+\qquad
+\omega_\gamma^{(2)}=\mathcal A_{\rm pol}[p,q].
+\label{eq:omega-area}
+\end{equation}
+である。初期シアーなしの基準では $p_i=q_i=0$ なので弦の項は消えるが、最終シアーは非零でよい。
+
+\subsection{Bondi ハード汎関数との係数 2}
+局所スクリーン上で
+\[
+C=\begin{pmatrix}X&Y\\Y&-X\end{pmatrix},\qquad
+\widetilde C=\begin{pmatrix}-Y&X\\X&Y\end{pmatrix}
+\]
+となる。ここでは付録の $\epsilon_{12}=+1$ と、Seraj--Oblak/Faye--Seraj と同じ添字順
+$\widetilde C_{AB}=\epsilon_{CA}C^C{}_B$ を用いている。$\epsilon_{AC}$ と添字順を逆にすると全体符号が反転するが、それは本稿の規約ではない。従って
+\begin{equation}
+N_{AB}\widetilde C^{AB}=2(X\dot Y-Y\dot X).
+\label{eq:stf-algebra}
+\end{equation}
+Faye--Seraj の偏光規約に合わせ、放射域で
+\begin{equation}
+C_{AB}=-r h^{TT}_{AB}+O(r^0)
+\label{eq:shear-strain}
+\end{equation}
+とする。式\eqref{eq:hard-memory},\eqref{eq:tt},\eqref{eq:stf-algebra}より
+\begin{equation}
+\Delta\Psi_{\rm H}(\eps)
+=\eps^2\Delta\Psi_{\rm H}^{(2)}+O(\eps^3),
+\qquad
+\Delta\Psi_{\rm H}^{(2)}
+=-\frac14\int(p\dot q-q\dot p)\,du.
+\label{eq:gyro-area}
+\end{equation}
+一方、初期シアーなし条件下の式\eqref{eq:omega-area}は
+\begin{equation}
+\omega_\gamma^{(2)}=\frac12\int(p\dot q-q\dot p)\,du.
+\label{eq:jacobi-area-eps}
+\end{equation}
+従って次を得る。
+
+\begin{theorem}[同一放射データ上の二次汎関数の係数対応]
+\label{thm:bridge}
+標準的な初期シアーなし Bondi フレーム、弱振幅、放射域の先頭次数、上記の向き付けたスクリーン規約の下で
+\begin{equation}
+\boxed{\omega_\gamma^{(2)}=-2\Delta\Psi_{\rm H}^{(2)}},\qquad
+\boxed{|\omega_\gamma^{(2)}|=2|\Delta\Psi_{\rm H}^{(2)}|}.
+\label{eq:bridge}
+\end{equation}
+\end{theorem}
+
+ここで $\omega_\gamma^{(2)}$ はヌル測地線上の Jacobi 散乱量、$\Delta\Psi_{\rm H}^{(2)}$ は時間的ジャイロ世界線の向き角であり、両者を同一観測量とは主張しない。等式は、第2節で固定した局所放射域パッチ・放射横断ヌル方向・適合スクリーンのもとで、同じ局所 TT/Bondi 放射データ $(p,q)$ を二つの既知汎関数へ代入したときの二次係数の対応である。異なるヌル方向やスクリーン同定へ変更した場合には、その新しい補助プローブに対して対応関係を改めて確認する必要がある。スクリーンの向きを反転すると、両擬スカラーの符号が同時に反転する。有限 $r$ と有限振幅を同時に制御する定理は主張せず、安全な係数の主張は
+\begin{equation}
+\lim_{r\to\infty}r^2\lim_{\eps\to0}\eps^{-2}
+\left(\omega_\gamma(\eps,r)+2\Delta\Psi_{\rm H}(\eps,r)\right)=0
+\label{eq:iterated-limit}
+\end{equation}
+という反復極限として理解する。
+
+\section{入出力定常条件を課した物理的最小作用定理}
+入出力の定常性が最良係数を決める。規格化区間で一次潮汐係数を
+\[
+A^{(1)}(t)=\alpha(t)\sigma_3+\beta(t)\sigma_1,\qquad
+\alpha=\frac12p'',\quad \beta=\frac12q''
+\]
+と書く。このとき $A(t;\eps)=\eps A^{(1)}(t)+O(\eps^2)$ である。固定 $r$ では $p,q=O(r^{-1})$ なので $\alpha,\beta=O(r^{-1})$ であり、$Q_\gamma^{(2)}$ と $\Delta\Psi_{\rm H}^{(2)}$ はともに $O(r^{-2})$ となる。このため以下の比と最良係数には追加の $r$ 因子が残らない。Bel--Robinson 曲率作用は
+\begin{equation}
+Q_\gamma(\eps)=\eps^2Q_\gamma^{(2)}+O(\eps^3),\qquad
+Q_\gamma^{(2)}=\|\alpha\|_2^2+\|\beta\|_2^2.
+\label{eq:Q-leading}
+\end{equation}
+また、$p'(0)=p'(1)=q'(0)=q'(1)=0$ より
+\begin{equation}
+\int_0^1\alpha(t)\,dt=\int_0^1\beta(t)\,dt=0.
+\label{eq:mean-zero}
+\end{equation}
+したがって
+\begin{equation}
+\mathcal U_0:=\left\{f\in L^2(0,1):\int_0^1 f(t)\,dt=0\right\},\qquad
+P_0f=f-\int_0^1f(s)\,ds
+\label{eq:U0}
+\end{equation}
+を導入し、
+\begin{equation}
+K_{\rm stat}:=P_0K_0P_0,
+\qquad s_{\rm stat}:=\|K_{\rm stat}\|_{\mathcal U_0\to\mathcal U_0}
+\label{eq:Kstat}
+\end{equation}
+とする。$K_{\rm stat}$ は $\mathcal U_0$ 上のコンパクト反自己共役作用素である。
+
+定常条件付きの厳密 Jacobi 最小作用関数を
+\begin{equation}
+\kappa_{\rm stat}(\omega):=
+\inf\{Q_\gamma[A]:\omega_\gamma[A]=\omega,\ \alpha,\beta\in\mathcal U_0\}
+\label{eq:kappa-stat}
+\end{equation}
+と定める。
+
+\begin{theorem}[定常 Jacobi チャネルの鋭い法則]
+\label{thm:stationary-sharp}
+\begin{equation}
+\boxed{\kappa_{\rm stat}(\omega)=\frac{|\omega|}{s_{\rm stat}}+O(\omega^2),\qquad \omega\to0.}
+\label{eq:stationary-sharp}
+\end{equation}
+係数 $s_{\rm stat}^{-1}$ は厳密終端問題の意味で鋭い。
+\end{theorem}
+\begin{proof}
+$\alpha,\beta\in\mathcal U_0$ なら
+\[
+\langle\alpha,K_0\beta\rangle
+=\langle\alpha,P_0K_0P_0\beta\rangle
+=\langle\alpha,K_{\rm stat}\beta\rangle.
+\]
+従って
+\[
+2|\langle\alpha,K_0\beta\rangle|
+\le s_{\rm stat}(\|\alpha\|^2+\|\beta\|^2)
+=s_{\rm stat}Q_\gamma.
+\]
+前節の剰余評価は閉部分空間への制限でも変わらないため、定理\ref{thm:jacobi-sharp}の下界の議論で $s_0$ を $s_{\rm stat}$ に置き換えればよい。
+
+鋭さについては、実 Hilbert 空間 $\mathcal U_0$ 上で $-K_{\rm stat}^2$ の最大固有値 $s_{\rm stat}^2$ に属する実単位固有ベクトル $\beta_*$ を取り、
+\[
+\alpha_*:=K_{\rm stat}\beta_*/s_{\rm stat}
+\]
+と置く。すると
+\[
+\|\alpha_*\|=\|\beta_*\|=1,\qquad
+\langle\alpha_*,K_{\rm stat}\beta_*\rangle=s_{\rm stat}
+\]
+であり、最大特異値対を実関数として構成できる。$A_*=\alpha_*\sigma_3+\beta_*\sigma_1$ とし $A_\rho=\rho A_*$ とすると、平均ゼロ条件は全ての $\rho$ で保存され、
+\[
+Q_\gamma[A_\rho]=2\rho^2,\qquad
+\omega_\gamma[A_\rho]=2s_{\rm stat}\rho^2+O(\rho^4).
+\]
+定理\ref{thm:jacobi-sharp}と同じ局所反転により正負両方の目標値を厳密に回復できる。よって上極限と下極限が一致し、式\eqref{eq:stationary-sharp}を得る。
+\end{proof}
+
+\begin{lemma}[定常 TT ひずみによる実現]
+\label{lem:physical-realization}
+任意の $\alpha,\beta\in\mathcal U_0$ に対し
+\begin{equation}
+p(t)=2\int_0^t(t-s)\alpha(s)\,ds,\qquad
+q(t)=2\int_0^t(t-s)\beta(s)\,ds
+\label{eq:pq-from-control}
+\end{equation}
+と置けば
+\[
+p(0)=q(0)=p'(0)=q'(0)=p'(1)=q'(1)=0,
+\qquad p''=2\alpha,\ q''=2\beta.
+\]
+従って、初期シアーなし、かつ入出力定常な一次 TT 波形を与える。
+\end{lemma}
+\begin{proof}
+初期値は定義から明らかであり、$p'(t)=2\int_0^t\alpha(s)ds$ だから $p'(1)=2\int_0^1\alpha=0$ である。$q$ も同様である。最終値 $p(1),q(1)$ は一般に非零であり、一定の最終シアーを許す。
+\end{proof}
+
+\begin{lemma}[滑らかな定常バーストでも同じ鋭い定数]
+\label{lem:smooth-density}
+\[
+\mathcal U_{0,c}^\infty:=\left\{f\in C_c^\infty(0,1):\int_0^1f(t)\,dt=0\right\}
+\]
+は $\mathcal U_0$ に稠密である。従って、曲率が端点近傍で消える滑らかな定常 TT バーストへ許容クラスを狭めても、先頭次数の鋭い係数 $s_{\rm stat}$ は変わらない。
+\end{lemma}
+\begin{proof}
+$f\in\mathcal U_0$ に対し $g_n\in C_c^\infty(0,1)$ を $L^2$ で $f$ に近づける。$\int g_n\to0$ である。$\int\chi=1$ を満たす固定 $\chi\in C_c^\infty(0,1)$ を取り、
+\[
+f_n:=g_n-\left(\int_0^1g_n\right)\chi
+\]
+と置けば $f_n\in\mathcal U_{0,c}^\infty$ かつ $f_n\to f$ in $L^2$ である。$K_{\rm stat}$ は有界なので双線形形式 $\langle\alpha,K_{\rm stat}\beta\rangle$ は $L^2\times L^2$ で連続である。従って最大特異値対をこの滑らかな平均ゼロ関数で任意精度に近似できる。さらに各近似対は端点近傍で曲率が消えるため、式\eqref{eq:pq-from-control}で得た $p,q$ は区間外へ定数として滑らかに接続できる。よって smooth stationary burst class の infimum も同じ鋭い定数を持つ。
+\end{proof}
+
+\section{主定理：Bel--Robinson 曲率曝露の鋭い下界}
+先頭次数のハード・メモリー目標 $\psi=\Delta\Psi_{\rm H}^{(2)}$ に対し、\emph{leading-order 放射データ問題}の値関数を
+\begin{equation}
+\kappa_{\rm H}^{\rm lead}(\psi):=
+\inf\left\{Q_\gamma^{(2)}[A^{(1)}]:\Delta\Psi_{\rm H}^{(2)}[A^{(1)}]=\psi,\ \alpha,\beta\in\mathcal U_0\right\}
+\label{eq:kappa-hard-lead}
+\end{equation}
+と定める。ここで最小化は上記の弱振幅 TT/Bondi 接線データのクラスで行い、full finite-amplitude Einstein 解全体の値関数は定義しない。
+
+\begin{theorem}[固定放射横断ヌル窓に対するハード・メモリーの鋭い最小曲率作用]
+\label{thm:main-physical}
+第2節の Bel--Robinson 規約、$L/r\to0$ の局所放射域パッチ内で固定した放射横断ヌル窓 $\gamma$ と適合スクリーン、標準的な初期シアーなし Bondi フレーム、弱振幅かつ放射域の先頭次数、入出力定常条件の下で（最終シアーは零に固定しない）
+\begin{equation}
+\boxed{\kappa_{\rm H}^{\rm lead}(\psi)=\frac{2}{\|K_{\rm stat}\|}|\psi|.}
+\label{eq:main-physical-value}
+\end{equation}
+この等式は摂動係数としての先頭次数放射データ問題で厳密であり、$2/\|K_{\rm stat}\|$ は最良係数である。
+\end{theorem}
+\begin{proof}
+式\eqref{eq:endpoint-expansion}の二次主項と定理\ref{thm:bridge}から、初期シアーなし・定常クラスでは
+\[
+\Delta\Psi_{\rm H}^{(2)}=-\langle\alpha,K_{\rm stat}\beta\rangle .
+\]
+従って
+\[
+2|\psi|=2|\langle\alpha,K_{\rm stat}\beta\rangle|
+\le s_{\rm stat}(\|\alpha\|_2^2+\|\beta\|_2^2)=s_{\rm stat}Q_\gamma^{(2)},
+\]
+すなわち $Q_\gamma^{(2)}\ge2|\psi|/s_{\rm stat}$ である。
+
+逆に、定理\ref{thm:stationary-sharp}の証明で構成した実最大特異値対 $\alpha_*,\beta_*$ を用いる。目標の符号に応じて $\beta_*$ の符号を選び、
+\[
+\alpha=r\alpha_*,\qquad \beta=\pm r\beta_*,\qquad r^2=\frac{|\psi|}{s_{\rm stat}}
+\]
+と置けば、$\Delta\Psi_{\rm H}^{(2)}=\psi$ かつ
+\[
+Q_\gamma^{(2)}=2r^2=\frac{2}{s_{\rm stat}}|\psi|
+\]
+を厳密に満たす。補題\ref{lem:physical-realization}で初期シアーなし・入出力定常な TT データへ持ち上がり、補題\ref{lem:smooth-density}により端点近傍で曲率が消える滑らかなバーストに限定しても同じ infimum を得る。
+\end{proof}
+
+従って固定ヌル窓上の下界は先頭次数の限定クラスで
+\begin{equation}
+Q_\gamma^{(2)}\ge\frac{2}{\|K_{\rm stat}\|}|\Delta\Psi_{\rm H}^{(2)}|
+\label{eq:main-bound}
+\end{equation}
+と書ける。数値検証では
+\begin{equation}
+\|K_{\rm stat}\|=0.0281140680170\ldots,
+\qquad
+\boxed{\frac{2}{\|K_{\rm stat}\|}=71.13876223\ldots.}
+\label{eq:main-bound-num}
+\end{equation}
+を得る。この十進値は定理の定義ではなく数値検証である。
+
+\begin{remark}[旧係数 $21.96874242\ldots$ との関係]
+無拘束 $L^2$ 問題の係数 $2/\|K_0\|=21.96874242\ldots$ は、定常部分クラスに対しても有効な弱い下界である。しかし、定常クラスの最良係数ではない。平均ゼロ制約の下では最適化を $K_{\rm stat}=P_0K_0P_0$ 上でやり直す必要があり、その結果が上の係数 $2/\|K_{\rm stat}\|$ である。
+\end{remark}

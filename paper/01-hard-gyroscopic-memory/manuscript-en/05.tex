@@ -1,0 +1,63 @@
+\section{Prior-art boundary and formulation of the novelty claim}
+We classify the ingredients of the paper into established results, consequences derived directly from established results, and results derived here.
+\begin{itemize}
+\item Gyroscopic gravitational memory: established \cite{SerajOblak2023}.
+\item Soft/spin and hard/helicity decomposition: established \cite{SerajOblak2023,FayeSeraj2025}.
+\item The $N_{AB}\widetilde C^{AB}$ hard functional: established \cite{SerajOblak2023,FayeSeraj2025}.
+\item Helicity/local-duality-generator interpretation: established \cite{SerajOblak2023}.
+\item Jacobi persistent observables and nonlinear plane waves: established \cite{Flanagan2019,Flanagan2020}.
+\item Plane-wave memory tensors: established \cite{Harte2025}.
+\item Bondi--Sachs hierarchy of curve-deviation observables: established \cite{GrantNichols2022}.
+\item Gyroscopic memory from holonomy: established \cite{SerajNeogi2023}.
+\item Bel--Robinson curvature algebra: established \cite{FerrandoSaez2012}.
+\item Area-constrained curve optimization and bending energy: adjacent established variational problems \cite{Hahmann2005,Ferone2016}.
+\item Factor relation between polarization area and the hard gyroscopic functional: convention-fixed derivation from established functionals.
+\item Unrestricted Jacobi minimum-action law $1/\|K_0\|$: derived here.
+\item Stationary Jacobi minimum-action law $1/\|P_0K_0P_0\|$: derived here.
+\item Best coefficient $2/\|P_0K_0P_0\|$ for the fixed-window hard-memory problem: derived here.
+\end{itemize}
+
+Flanagan, Grant, Harte, and Nichols established the general framework of persistent observables and the Jacobi structure of nonlinear plane waves \cite{Flanagan2019,Flanagan2020}. Grant and Nichols developed curve-deviation observables in asymptotically flat spacetimes in the Bondi--Sachs framework \cite{GrantNichols2022}. Harte, Mieling, Oancea, and Steininger organized plane-wave scattering in terms of a finite set of memory tensors \cite{Harte2025}. Seraj and Neogi related the Lorentz part of asymptotic holonomy to gyroscopic memory \cite{SerajNeogi2023}. None of these structures is claimed as original here.
+
+There are also neighboring mathematical problems. Hahmann, Sauvage, and Bonneau studied area-preserving multiresolution deformations of closed planar curves and associated bending-energy optimization \cite{Hahmann2005}. Ferone, Kawohl, and Nitsch studied geometric elastica minimization under a fixed enclosed area \cite{Ferone2016}. These problems are close in spirit to the signed-area functional and second-derivative cost that appear here, but they differ in closed-curve/arc-length geometry, boundary conditions, the fixed-null-window Jacobi/Bondi pullback, and the mean-zero compressed operator. We therefore do not claim that area-constrained bending-energy optimization is new.
+
+We make no claim of historical priority. The generic mechanisms of Cauchy--Schwarz, compact-operator norm saturation, and area-constrained curve optimization are established and are not counted as novelty. Our final same-condition literature search did not identify a prior theorem simultaneously imposing stationary-in/stationary-out conditions, an initially shear-free frame, a fixed radiation-crossing null window, a Bel--Robinson curvature action, a hard gyroscopic/helicity target, and an optimal coefficient. The novelty claimed here is restricted to the combination in which the physical stationarity conditions select the mean-zero space and the compressed operator $K_{\rm stat}=P_0K_0P_0$, the fixed auxiliary-null-probe curvature action is related to the hard gyroscopic functional of the same radiative data, and the optimal coefficient is determined with exact Jacobi recovery. The literature search itself does not establish a historical first.
+
+\section{Discussion}
+The main result gives the best lower bound between an established hard gyroscopic functional and the leading perturbative coefficient of a curvature action measured on a fixed null window crossing the same radiative data. Once the quadratic hard-memory coefficient is prescribed, no smaller $Q_\gamma^{(2)}$ can generate the same leading hard/helicity channel, while smooth stationary admissible recovery families approach the boundary arbitrarily closely. This is not merely a relabeling of the known helicity functional: it requires a constrained inverse optimization over waveform space. At the final mathematical step, however, the optimization is a standard operator-norm problem. The value of the result lies in the physical formulation, the constraint-selected operator, and the bridge between the two functionals under the stated conditions.
+
+Stationarity substantially changes the coefficient. Formally transferring the unrestricted Jacobi coefficient to the hard-memory problem does not guarantee that the optimizing waveform is stationary before and after the burst. Imposing the physical conditions contracts the admissible tangent space to $\mathcal U_0$ and changes the relevant norm from $\|K_0\|$ to $\|P_0K_0P_0\|$. Consequently, the sharp coefficient is approximately $71.14$, rather than approximately $21.97$. This difference is a direct effect of the mean-zero compression.
+
+The scope remains limited. First, $Q_\gamma$ is not a standard gravitational-wave energy. Second, the hard gyroscopic memory is an $r^{-2}$ effect and is quadratic in the weak-field radiative data, so it is not presently a directly detector-oriented observable. Third, the hard/soft split is frame dependent and the theorem is fixed to an initially shear-free convention. Fourth, the theorem concerns weak amplitude and leading radiation-zone order, not a global finite-amplitude value function on the nonlinear Einstein solution space.
+
+The conclusions therefore have three layers. (i) The nonlinear Jacobi memory channel has an exact sharp small-target minimum-action law. (ii) With stationary-in/stationary-out conditions, the same structure survives on the mean-zero subspace through the compressed operator $K_{\rm stat}=P_0K_0P_0$. (iii) In the standard initially shear-free Bondi radiation frame, the quadratic coefficient of that stationary Jacobi channel is minus twice the quadratic hard gyroscopic-memory coefficient, so the leading-order radiative-data problem with cost $Q_\gamma^{(2)}$ is solved exactly by $\kappa_{\rm H}^{\rm lead}(\psi)=2|\psi|/\|K_{\rm stat}\|$.
+
+\section{Conclusion}
+We formulated a self-contained minimum-action problem for null Jacobi scattering and first proved, in the unrestricted class,
+\[
+\kappa_\Omega(\omega)=\frac{|\omega|}{\|K_0\|}+O(\omega^2).
+\]
+We then used the fact that physical stationarity imposes mean-zero tidal controls and obtained the restricted sharp law
+\[
+\kappa_{\rm stat}(\omega)=\frac{|\omega|}{\|K_{\rm stat}\|}+O(\omega^2),
+\qquad K_{\rm stat}=P_0K_0P_0.
+\]
+Finally, the local STF algebra of the Bondi shear and the polarization area of a weak TT wave give
+\[
+\omega_\gamma^{(2)}=-2\Delta\Psi_{\rm H}^{(2)}.
+\]
+Therefore, in the standard initially shear-free frame, with stationary-in/stationary-out data at weak amplitude and leading radiation-zone order,
+\[
+\kappa_{\rm H}^{\rm lead}(\psi)=\frac{2}{\|K_{\rm stat}\|}|\psi|,
+\qquad
+\frac{2}{\|K_{\rm stat}\|}=71.13876223\ldots.
+\]
+Here $\psi=\Delta\Psi_{\rm H}^{(2)}$ is a quadratic perturbative coefficient and the minimized cost is $Q_\gamma^{(2)}$. The coefficient is exactly sharp for the leading-order TT/Bondi radiative-data problem. The exact nonlinear Jacobi endpoint value function is instead governed by the distinct asymptotic theorem $\kappa_{\rm stat}(\omega)=|\omega|/\|K_{\rm stat}\|+O(\omega^2)$. A finite-amplitude hard-memory minimum-action law on the full Einstein solution space lies outside the claims of this paper.
+
+Natural extensions include removing or replacing the auxiliary fixed-window structure, extending the value function to finite-amplitude Einstein solutions, and determining the best coefficient when the final shear is constrained as well.
+
+\section*{Acknowledgments}
+OpenAI ChatGPT (GPT-5.6 Sol) was used to assist with research, code development, and manuscript preparation; all scientific content was verified by the author.
+
+\section*{Data Availability Statement}
+The custom code and numerical outputs supporting the numerical validation are publicly available in the companion repository at \url{https://github.com/stitch224/gravitational-memory-public}, under \texttt{paper/01-hard-gyroscopic-memory/reproducibility}.

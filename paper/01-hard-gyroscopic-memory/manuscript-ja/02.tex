@@ -1,0 +1,207 @@
+\section{幾何学的・物理的設定}
+\subsection{Bondi フレームとハード・ジャイロスコピック・メモリー}
+Bondi 座標を $(u,r,\theta^A)$ とし、
+\[
+g_{AB}=r^2\gamma_{AB}+rC_{AB}+O(1),\qquad N_{AB}=\partial_u C_{AB}
+\]
+とする。本稿ではハード／ソフト分解の基準として、標準的な初期シアーなし真空フレーム
+\begin{equation}
+C_{AB}(u=-\infty)=0
+\label{eq:early-shear-free}
+\end{equation}
+を固定する。最終シアー $\Delta C_{AB}$ は非零でよく、通常の変位メモリーを排除しない。
+
+Seraj--Oblak および Faye--Seraj の規約に合わせ、$\widetilde C_{AB}=\epsilon_{CA}C^C{}_B$ とする。ジャイロスコープ歳差のハード成分は
+\begin{equation}
+\widehat\Omega_{\rm H}=-\frac18N_{AB}\widetilde C^{AB}
+\label{eq:hard-precession}
+\end{equation}
+であり、物理的な向き角は放射域で
+\begin{equation}
+\Delta\Psi_{\rm H}=\frac{1}{r^2}\bar\Phi_{\rm H}+O(r^{-3}),\qquad
+\bar\Phi_{\rm H}=-\frac18\int du\,N_{AB}\widetilde C^{AB}.
+\label{eq:hard-memory}
+\end{equation}
+本稿では $\Delta\Psi_{\rm H}$ をハード／ヘリシティ・ジャイロスコピック・メモリーと呼ぶ。これはジャイロスコピック・メモリー全体でもスピン・メモリーでもない\cite{SerajOblak2023,FayeSeraj2025}。
+
+\subsection{ヌル Jacobi 系}
+四次元 Lorentz 時空で、放射を横切る補助的なヌル測地線区間 $\gamma:[\lambda_0,\lambda_1]\to M$ を考え、$\lambda$ をアフィン・パラメータ、$k=d\gamma/d\lambda$, $L=\lambda_1-\lambda_0>0$ とする。$\gamma$ はジャイロスコープの時間的世界線ではない。また、放射域で outgoing wave と共伝播する $u=\mathrm{const.}$ のヌル生成線も対象外とし、先頭放射曲率を横切る $du/d\lambda\neq0$ のヌル線を選ぶ。本稿ではさらに、$r\to\infty$ で $L$ を固定して $L/r\to0$ とする局所放射域パッチを用い、$\gamma$ の角方向・半径方向のドリフトによる効果を先頭 $1/r$ 次数の外へ送る。スクリーン基底は、この局所パッチで Bondi/TT 偏光二脚の横方向成分と一致するよう適合させる。これらは主定理の幾何学的仮定であり、任意の有限 $r$ のヌル方向に対する方向独立な主張ではない。
+
+先頭の漸近平坦・局所平面波近似では $du/d\lambda$ は一定であり、正のアフィン自由度を用いて $du/d\lambda=1$ と規格化し、選択した stationary-to-stationary 窓の retarded-time 幅と $L$ を一致させる。$e_A$ を平行移動された正規直交スクリーン基底とし、
+\begin{equation}
+T_{AB}(\lambda)=-R(e_A,k,e_B,k)
+\label{eq:tidal}
+\end{equation}
+とする。$\Ric(k,k)=0$ なら $T$ は対称トレースレスな $2\times2$ 行列である。
+
+$t=(\lambda-\lambda_0)/L$ と無次元化し、
+\[
+A(t)=L^2T(\lambda_0+Lt)
+\]
+を定める。Jacobi 基本行列 $\Phi$ は
+\begin{equation}
+\frac{d\Phi}{dt}=
+\begin{pmatrix}0&I_2\\ A(t)&0\end{pmatrix}\Phi,
+\qquad \Phi(0)=I_4
+\label{eq:jacobi}
+\end{equation}
+を満たす。自由伝播行列を $F_0(s)=\begin{psmallmatrix}I_2&sI_2\\0&I_2\end{psmallmatrix}$ として
+\begin{equation}
+S_\gamma=F_0(-1)\Phi(1)
+\label{eq:S}
+\end{equation}
+を、平坦時空での自由伝播を除いた散乱行列とする。ブロック分解 $S_\gamma=(S_{ij})$ に対して
+\begin{equation}
+\operatorname{skew}(S_{11}+S_{22})=\omega_\gamma J_2,
+\qquad J_2=\begin{pmatrix}0&-1\\1&0\end{pmatrix}
+\label{eq:omega-def}
+\end{equation}
+で定まる実スカラー $\omega_\gamma$ を非線形 Jacobi メモリー／散乱チャネルと呼ぶ。これは平面波メモリーテンソル表示では、対角 Jacobi ブロックの反対称結合に対応する\cite{Flanagan2020,Harte2025}。
+
+\subsection{Bel--Robinson 曲率曝露}
+計量の符号を $(-+++)$ とし、Bel--Robinson テンソルを
+\begin{equation}
+B_{abcd}=\frac14\left(C_{aecf}C_b{}^e{}_d{}^f+{}^\star C_{aecf}\,{}^\star C_b{}^e{}_d{}^f\right)
+\label{eq:BR-def}
+\end{equation}
+と規格化する。真空のヌル・スクリーンでは
+\begin{equation}
+B(k,k,k,k)=|\Psi_0|^2=\frac12\tr(T^2).
+\label{eq:BR-tidal}
+\end{equation}
+そこで
+\begin{equation}
+Q_\gamma:=L^3\int_{\lambda_0}^{\lambda_1}B(k,k,k,k)\,d\lambda
+=\frac12\int_0^1\tr(A(t)^2)\,dt
+\label{eq:Q}
+\end{equation}
+と定義する。$\lambda'=a\lambda+b$（$a>0$）という正のアフィン再パラメータ化では
+$L'=aL$, $k'=a^{-1}k$, $d\lambda'=a\,d\lambda$,
+$B(k',k',k',k')=a^{-4}B(k,k,k,k)$ なので、
+$L'^3d\lambda'\,B(k'^4)=L^3d\lambda\,B(k^4)$ となる。従って $du/d\lambda=1$ は固定した放射横断ヌル区間のアフィン同値類から代表を選ぶ規格化であり、$Q_\gamma$ 自体のアフィン不変性を壊さない。ただし、区間端点を動かして窓そのものを変える、または別の放射横断ヌル方向・別のスクリーン同定を選ぶ場合は別の補助プローブ問題であり、$Q_\gamma$ は window-independent / direction-independent な量ではない。
+
+\begin{remark}
+$Q_\gamma$ は Weyl 曲率の二次量に由来する無次元の窓付きヌル作用であり、ジャイロ世界線上の曝露量、Bondi 質量減少、Isaacson 有効応力エネルギーテンソル、放射エネルギー、検出器エネルギーのいずれとも同一視しない。
+\end{remark}
+
+\section{Jacobi メモリーと最小作用問題}
+STF 基底
+\[
+\sigma_3=\begin{pmatrix}1&0\\0&-1\end{pmatrix},\qquad
+\sigma_1=\begin{pmatrix}0&1\\1&0\end{pmatrix}
+\]
+を用いて
+\begin{equation}
+A(t)=\alpha(t)\sigma_3+\beta(t)\sigma_1,
+\qquad Q_\gamma=\|\alpha\|_2^2+\|\beta\|_2^2.
+\label{eq:control}
+\end{equation}
+
+\begin{definition}
+\begin{equation}
+(K_0f)(t)=\frac12\int_0^1(t-s)|t-s|f(s)\,ds,
+\qquad s_0:=\|K_0\|,
+\label{eq:K0}
+\end{equation}
+とする。核は反対称なので $K_0^*=-K_0$、かつ Hilbert--Schmidt 作用素なのでコンパクトである。
+\end{definition}
+
+\begin{lemma}[厳密終端写像の小振幅展開]
+\label{lem:endpoint-expansion}
+十分小さい $A$ に対して
+\begin{equation}
+\omega_\gamma[A]=2\langle\alpha,K_0\beta\rangle+R_\omega[A],
+\qquad |R_\omega[A]|\le C Q_\gamma[A]^2
+\label{eq:endpoint-expansion}
+\end{equation}
+となる $C>0$ が存在する。
+\end{lemma}
+\begin{proof}
+式\eqref{eq:jacobi}の各 Jacobi 列を $X''=AX$ と書くと、
+\[
+X(t)=X(0)+tX'(0)+(\mathcal V_A X)(t),\qquad
+(\mathcal V_A X)(t):=\int_0^t(t-s)A(s)X(s)\,ds .
+\]
+区間長が 1 なので
+\[
+\|\mathcal V_A X\|_\infty
+\le \|A\|_{L^1,F}\|X\|_\infty
+\le \|A\|_{L^2,F}\|X\|_\infty .
+\]
+従って $\|A\|_{L^2,F}$ が十分小さければ Neumann--Volterra 級数は絶対収束し、終端の $X(1),X'(1)$、したがって $\Phi(1)$ と $\omega_\gamma[A]$ は $A$ の原点近傍で解析的である。ここで
+\[
+\mathcal V:=\operatorname{span}\{\sigma_1,\sigma_3\},\qquad
+\mathcal E:=\operatorname{span}\{I_2,J_2\}
+\]
+と置くと、$\mathcal V\mathcal V\subset\mathcal E$ かつ $\mathcal E\mathcal V\subset\mathcal V$ である。従って奇数個の $A(t_i)\in\mathcal V$ の積は再び対称な $\mathcal V$ に入り、反対称チャネルへ寄与しない。一次項も対称なので消え、二次の時間順序項では二つの STF 基底の非可換部分のみが残る。$[\sigma_3,\sigma_1]=-2J_2$ を用いて反対称化すると核 $\frac12(t-s)|t-s|$ が現れ、主項 $2\langle\alpha,K_0\beta\rangle$ を得る。次に寄与しうる次数は四次なので、ある固定近傍で
+\[
+|R_\omega[A]|\le C_1\|A\|_{L^1,F}^4
+\le C_1\|A\|_{L^2,F}^4
+=C Q_\gamma^2
+\]
+と一様に抑えられる。
+\end{proof}
+
+\section{鋭い最小作用定理}
+\begin{equation}
+\kappa_\Omega(\omega):=\inf\{Q_\gamma[A]:\omega_\gamma[A]=\omega\}
+\label{eq:value}
+\end{equation}
+とする。
+
+\begin{theorem}[無拘束の非線形 Jacobi チャネルに対する鋭い法則]
+\label{thm:jacobi-sharp}
+\begin{equation}
+\boxed{\kappa_\Omega(\omega)=\frac{|\omega|}{\|K_0\|}+O(\omega^2),\qquad \omega\to0.}
+\label{eq:sharp-jacobi}
+\end{equation}
+係数は厳密終端問題の意味で鋭い。
+\end{theorem}
+\begin{proof}
+まず Cauchy--Schwarz 不等式と算術・幾何平均不等式から
+\begin{equation}
+2|\langle\alpha,K_0\beta\rangle|
+\le s_0(\|\alpha\|_2^2+\|\beta\|_2^2)=s_0 Q_\gamma.
+\label{eq:quad-lower}
+\end{equation}
+コンパクト性により $-K_0^2$ の最大固有空間はノルムを達成する。実単位ベクトル $\beta_*$ を
+\[
+-K_0^2\beta_*=s_0^2\beta_*,\qquad
+\alpha_*:=K_0\beta_*/s_0
+\]
+と取ると、$\|\alpha_*\|=\|\beta_*\|=1$ かつ $\langle\alpha_*,K_0\beta_*\rangle=s_0$ である。$A_*=\alpha_*\sigma_3+\beta_*\sigma_1$ とすれば $Q_\gamma[A_*]=2$ かつ二次メモリーは $2s_0$ となり、式\eqref{eq:quad-lower}を飽和する。
+
+厳密回復構成のため $A_\rho=\rho A_*$ とする。前補題より
+\begin{equation}
+\omega_\gamma[A_\rho]=2s_0 \rho^2+O(\rho^4),\qquad Q_\gamma[A_\rho]=2\rho^2.
+\label{eq:recovery-ray}
+\end{equation}
+解析性と式\eqref{eq:recovery-ray}から
+\[
+\frac{d}{d\rho}\omega_\gamma[A_\rho]
+=4s_0\rho+O(\rho^3)>0
+\]
+が十分小さい $\rho>0$ で成り立つ。従って $\rho=0$ で通常の逆関数定理を使うのではなく、正の片側での厳密な単調性により、各十分小さい正の $\omega$ に対して一意な $\rho(\omega)>0$ が存在する。従って
+\[
+Q_\gamma[A_{\rho(\omega)}]=\frac{\omega}{s_0}+O(\omega^2).
+\]
+負の目標に対しては $A_*^-:=\alpha_*\sigma_3-\beta_*\sigma_1$ と置けば
+\[
+\omega_\gamma[\rho A_*^-]=-2s_0 \rho^2+O(\rho^4),\qquad
+\frac{d}{d\rho}\omega_\gamma[\rho A_*^-]=-4s_0\rho+O(\rho^3)<0,
+\]
+なので同じ片側単調性で厳密な負の分枝を得る。これが上極限を与える。
+
+一方、上の回復構成からあらかじめ $\kappa_\Omega(\omega)=O(|\omega|)$ が分かるので、最小化列は $Q_\gamma=O(|\omega|)$ を満たすように選べる。その列に式\eqref{eq:endpoint-expansion},\eqref{eq:quad-lower}を適用すると
+\[
+|\omega|\le s_0 Q_\gamma+C Q_\gamma^2.
+\]
+$Q_\gamma=O(|\omega|)$ を用いると下界は $Q_\gamma\ge |\omega|/s_0-O(\omega^2)$ となる。回復構成の上界と合わせて式\eqref{eq:sharp-jacobi}が従う。
+\end{proof}
+
+Gauss--Legendre Nystr\"om 法による検算では
+\begin{equation}
+\|K_0\|=0.09103843824\ldots,\qquad \|K_0\|^{-1}=10.98437121\ldots
+\label{eq:numeric-k0}
+\end{equation}
+である。この十進値は数値検証であり、定理の定義そのものではない。
